@@ -1,0 +1,403 @@
+.body {
+  background-color: #131111;
+}
+header {
+  margin-top: 20px;
+}
+a {
+  text-decoration: none;
+}
+.contanier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 1000;
+  background-color: #000000;
+}
+/* -------------------------------------------------------- */
+/* بخش لوگو */
+.contanier-logo {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-contanier {
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
+  flex: 1;
+}
+
+/* بخش لوگو */
+
+/* بخش سرچ بار */
+
+.search-container {
+  position: relative;
+  width: 479px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(-180deg, #333333 0%, #1a1a1a 80%);
+  padding: 0 45px 0 20px;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.search-input {
+  width: 90%;
+  height: 50px;
+  background: linear-gradient(#333333 0%, #1a1a1a 80%);
+  border: none;
+  color: #fff;
+  font-family: iranyekanwebmedium;
+}
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #ffd700;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+/* بخش سرچ بار */
+
+/* بخش ثبت نام */
+.login-contanier {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+  padding-left: 40px;
+}
+.login-contanier a {
+  color: #fff;
+}
+.login-contanier-one {
+  width: 176px;
+  height: 5px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 5px;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #131111;
+  color: #fff;
+  outline: none;
+  font-family: iranyekanwebmedium;
+}
+.login-contanier-one p {
+  font-family: iranyekanwebmedium;
+  font-size: 18px;
+}
+.login-contanier-one-yellow {
+  background-color: #eebb19;
+  border-radius: 40px;
+  width: 96px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-contanier-khat {
+  border-left: 1px solid rgba(255, 255, 255, 0.445);
+  height: 50px;
+  margin-left: 5px;
+}
+/* بخش ثبت نام */
+
+/* بخش همبرگر منو */
+.hamburger-menu {
+  display: none;
+}
+.hamburger-icon {
+  display: none;
+}
+/* بخش همبرگر منو */
+/* منو پایینی موبایل */
+.mobile-menu {
+  display: none;
+}
+/* منو پایینی موبایل */
+
+/* نوبار */
+.main-navbar {
+  position: fixed;
+  top: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.148);
+  transition: transform 0.3s ease-in-out;
+  border-top: 1px solid rgba(128, 128, 128, 0.419);
+  margin-top: 30px;
+  z-index: 10001;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+.navbar-hidden {
+  transform: translateY(-300%);
+}
+
+.hamburger-menu-navbar {
+  display: none;
+}
+
+.hamburger-icon-navbar-div {
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-family: YekanBakhHeavy;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.menu-navbar {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 1.2rem;
+  font-family: YekanBakhHeavy;
+}
+.menu-navbar a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px; /* به جای width/height */
+  border-radius: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu-navbar a:hover {
+  background-color: #ffd700;
+}
+
+.menu-phone {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: YekanBakhHeavy;
+  font-size: 1.2rem;
+}
+/* نوبار */
+
+/* بنر */
+.main-banner {
+  position: relative;
+}
+.banner-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter: sepia(0.2) saturate(2) hue-rotate(-10deg);
+}
+
+.image-weader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+}
+.image-weader img {
+  padding-bottom: 80px;
+  padding-left: 30px;
+}
+.title-button-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: YekanBakhMedium  ;
+  color: #fff;
+  font-size: .8rem;
+}
+/* بنر */
+/* دسته بندی محصولات */
+.Product-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.Product-categories div img {
+  width: 250px;
+}
+.Product-categories div p {
+  font-size: 20px;
+  color: #fff;
+  font-family: YekanBakhMedium;
+}
+
+/* دسته بندی محصولات */
+
+
+
+@media (min-width: 375px) and (max-width: 667px) {
+  header {
+    margin: 0;
+    z-index: 1000;
+    position: fixed;
+  }
+  .contanier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+  }
+
+  /* لوگو */
+
+  .img-logo img {
+    width: 100px;
+  }
+
+  /* سرچ بار */
+  .search-container {
+    display: none;
+  }
+
+  .search-input {
+    font-size: 10px;
+  }
+
+  .search-icon {
+    left: 14px;
+    font-size: 18px;
+  }
+
+  /* bag */
+  .login-contanier-one {
+    display: none;
+  }
+  .login-contanier-khat {
+    display: none;
+  }
+  .login-contanier-bag img {
+    width: 25px;
+    height: 25px;
+  }
+  /* bag */
+  /* همبرگر منو */
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 200%;
+    
+  }
+  /* همبرگر منو */
+  /* منو موبایل */
+  .mobile-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #131111;
+    border-top: 1px solid #e5e5e5;
+    padding: 2px 0;
+    z-index: 9999;
+  }
+
+  .mobile-menu > div {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: #eebb19;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-family: YekanBakhBold;
+    cursor: pointer;
+  }
+
+  .mobile-menu img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .mobile-menu .shop-mbile img {
+    width: 26px;
+    height: 26px;
+  }
+  .mobile-menu .user-mobil img {
+    width: 28px;
+    height: 28px;
+  }
+  /* منو موبایل */
+  /* نوبار */
+  .main-navbar {
+    display: none;
+  }
+  /* نوبار */
+
+  /* بنر */
+  .banner-img {
+    width: 100%;
+    height: 60%;
+    margin-top: 70px;
+  }
+  .image-weader img {
+    width: 150px;
+    padding-bottom: 10px;
+  }
+  .title-button-banner {
+    font-size: .4rem;
+  }
+  /* بنر */
+  /* دسته بندی محصولات */
+  .Product-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .Product-categories div img {
+    width: 80px;
+    margin: auto;
+  }
+  .Product-categories div p {
+    color: #fff;
+    font-family: iranyekanwebmedium;
+    font-size: .6rem;
+  }
+  /* دسته بندی محصولات */
+}
