@@ -258,6 +258,86 @@ a {
 }
 
 /* دسته بندی محصولات */
+/* swapir محصولات پرفروش */
+.contanier-bestProducts {
+  background: linear-gradient(to bottom, #4d4d4d19, black);
+  margin-top: 100px;
+}
+.contanier-bestProducts-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 100px 50px;
+}
+.contanier-bestProducts-title p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: iranyekanwebregular;
+}
+.contanier-bestProducts-title span {
+  width: 1200px;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+}
+.contanier-bestProducts-title button {
+  width: 150px;
+  height: 50px;
+  padding-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #eebb19;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: YekanBakhHeavy;
+  cursor: pointer;
+}
+.contanier-bestProducts-title button:hover {
+  background-color: #ffd900c7;
+}
+
+.contanier-bestProducts-Ellipse {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 350px; 
+  color: #fff;
+  z-index: 10000;
+  position: absolute;
+  bottom: 50px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-right: 700px;
+}
+
+.swiper-slide {
+  width: 240px !important; 
+  height: 336px !important;
+  background: rgba(99, 98, 98, 0.2); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    inset 0 0 15px rgba(255, 255, 255, 0.2),
+    inset 0 0 30px rgba(0, 0, 0, 0.5),       
+    0 10px 20px rgba(0, 0, 0, 0.4);          
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+}
+/* محصولات پر فروش */
 
 
 
@@ -400,4 +480,8 @@ a {
     font-size: .6rem;
   }
   /* دسته بندی محصولات */
+
+  /* محصولات پرفروش */
+ 
+  /* محصولات پرفروش */
 }
