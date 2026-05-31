@@ -20,5 +20,13 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: false,
   slidesPerView: 4,
+  breakpoints: {
+    375: {
+      slidesPerView: 1.5,
+      spaceBetween: 14,
+      centeredSlides: false,
+    },
+  },
+
 });
 // swapir محصولات پر فروش
