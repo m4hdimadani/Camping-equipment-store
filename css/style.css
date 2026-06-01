@@ -1,5 +1,5 @@
 .body {
-  background-color: #131111;
+  background-color: #000000;
 }
 header {
   margin-top: 20px;
@@ -454,7 +454,64 @@ a {
   padding-right: 5px;
   font-family: YekanBakhMedium;
 }
+.product-img-glass {
+  margin-top: 55px;
+  padding-bottom: 8px;
+}
+
+.product-img-glass img {
+  width: 110px;
+}
+.product-img-table img {
+  width: 80px;
+}
+.product-img-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 /* محصولات پر فروش */
+/* بنر کمپ یار */
+.banner-campYar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: sepia(0.2) saturate(2) hue-rotate(-10deg);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  position: relative;
+}
+.banner-campYar img {
+  width: 70%;
+  height: 600px;
+}
+.banner-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 350px;
+  margin-bottom: 50px;
+}
+.banner-button button {
+  width: 250px;
+  height: 96px;
+  border-radius: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.479);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2),
+    inset 0 0 30px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  background: linear-gradient(#ffba59 0%, #f7944a 100%);
+  color: #fff;
+  font-family: iranyekanwebmedium;
+  font-size: 1.2rem;
+}
+.banner-button button:hover {
+  background: linear-gradient(#ffba59 0%, #c86417 100%);
+}
+.banner-mobail {
+  display: none;
+}
+/* بنر کمپ یار */
 
 @media (min-width: 375px) and (max-width: 667px) {
   header {
@@ -615,7 +672,6 @@ a {
   .contanier-bestProducts-title button img {
     width: 10px;
   }
- 
 
   .contanier-bestProducts {
     margin-top: 40px;
@@ -724,7 +780,6 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    
   }
 
   .details-products {
@@ -747,7 +802,18 @@ a {
     padding-top: 8px;
     font-size: 0.78rem;
   }
- 
-
+  .banner-campYar {
+    display: none;
+  }
+  .banner-mobail {
+    display: block;
+    margin-top: -50px;
+    margin-bottom: 100px;
+    filter: sepia(0.2) saturate(2) hue-rotate(-10deg);
+  }
+  .banner-mobail img {
+    width: 100%;
+    height: 100%;
+  }
   /* محصولات پرفروش */
 }
