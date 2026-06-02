@@ -312,6 +312,8 @@ a {
   position: absolute;
   bottom: 50px;
   cursor: grab;
+  display: flex;
+  
 }
 
 .swiper-wrapper {
@@ -512,6 +514,45 @@ a {
   display: none;
 }
 /* بنر کمپ یار */
+/* کالا های تخیف دار */
+.swiper-off {
+  width: calc(100% - 264px);
+  height: 350px;
+  color: #fff;
+  z-index: 10000;
+  position: absolute;
+  bottom: 50px;
+  cursor: grab;
+  display: flex;
+  position: static;
+  flex: 1;
+}
+
+.discount-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 96%;
+  position: absolute;
+  bottom: 50px;
+  z-index: 10000;
+}
+.comparison-yellow {
+  width: 240px !important;
+  height: 336px !important;
+  background:  linear-gradient(#ff9500 0%, #f7944a 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2),
+    inset 0 0 30px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* کالا های تخیف دار */
 
 @media (min-width: 375px) and (max-width: 667px) {
   header {
@@ -709,14 +750,17 @@ a {
 
   .swiper {
     position: static;
-    width: 100%;
+    width: auto !important;
     height: auto;
+    flex: 1;
+    min-width: 0;
     overflow-x: auto;
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 10px 15px 20px 15px;
     box-sizing: border-box;
+    z-index: 1;
   }
 
   .swiper::-webkit-scrollbar {
@@ -816,4 +860,28 @@ a {
     height: 100%;
   }
   /* محصولات پرفروش */
+  /* محصولات تخفیف دار */
+  .swiper-off {
+    width: auto !important;
+    height: 290px !important;
+    flex: 1;
+    min-width: 0;
+  }
+  .discount-section {
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    gap: 14px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    
+  }
+  .comparison-yellow {
+    width: 110px !important;
+    height: 290px !important;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  /* محصولات تخفیف دار */
 }
