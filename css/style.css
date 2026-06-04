@@ -1,6 +1,8 @@
-.body {
+body {
   background-color: #000000;
+  overflow-x: hidden;
 }
+
 header {
   margin-top: 20px;
 }
@@ -179,7 +181,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: YekanBakhHeavy;
 }
 .menu-navbar a {
@@ -188,7 +190,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; /* به جای width/height */
+  padding: 8px 18px;
   border-radius: 40px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -203,7 +205,7 @@ a {
   gap: 10px;
   color: #fff;
   font-family: YekanBakhHeavy;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 /* نوبار */
 
@@ -313,7 +315,6 @@ a {
   bottom: 50px;
   cursor: grab;
   display: flex;
-  
 }
 
 .swiper-wrapper {
@@ -515,19 +516,6 @@ a {
 }
 /* بنر کمپ یار */
 /* کالا های تخیف دار */
-.swiper-off {
-  width: calc(100% - 264px);
-  height: 350px;
-  color: #fff;
-  z-index: 10000;
-  position: absolute;
-  bottom: 50px;
-  cursor: grab;
-  display: flex;
-  position: static;
-  flex: 1;
-}
-
 .discount-section {
   display: flex;
   align-items: center;
@@ -537,10 +525,27 @@ a {
   bottom: 50px;
   z-index: 10000;
 }
+.swiper-off {
+  flex: 1;
+  min-width: 0;
+  height: 350px;
+  color: #fff;
+  cursor: grab;
+  position: relative;
+  z-index: 10001;
+  overflow: hidden;
+  
+}
+.swiper-wrapper {
+  padding-right: 100px;
+}
 .comparison-yellow {
   width: 240px !important;
   height: 336px !important;
-  background:  linear-gradient(#ff9500 0%, #f7944a 100%);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10002;
+  background: linear-gradient(#ff9500 0%, #f7944a 100%);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -549,10 +554,67 @@ a {
   border-radius: 24px;
   color: white;
   cursor: pointer;
-  z-index: 10000;
+  font-family: YekanBakhBold;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.comparison-yellow img {
+  width: 150px;
+  padding-bottom: 50px;
 }
 
 /* کالا های تخیف دار */
+/* برند ها */
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+/* برند ها */
+/* نظرات مشتریان */
+
+swiper-container {
+  width: 60%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+.mySwiper::part(bullet) {
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border: 1px solid gray;
+  
+}
+
+
+.mySwiper::part(bullet-active) {
+  background: #eebb19;
+  width: 14px;
+  height: 14px;
+}
+
+/* نظرات مشتریان */
 
 @media (min-width: 375px) and (max-width: 667px) {
   header {
@@ -620,7 +682,7 @@ a {
     background: #131111;
     border-top: 1px solid #e5e5e5;
     padding: 2px 0;
-    z-index: 9999;
+    z-index: 10003;
   }
 
   .mobile-menu > div {
@@ -775,7 +837,7 @@ a {
     gap: 14px;
     margin-right: 0;
     width: max-content;
-    padding-left: 15px;
+    padding-right: 150px;
   }
 
   .swiper-slide {
@@ -861,12 +923,6 @@ a {
   }
   /* محصولات پرفروش */
   /* محصولات تخفیف دار */
-  .swiper-off {
-    width: auto !important;
-    height: 290px !important;
-    flex: 1;
-    min-width: 0;
-  }
   .discount-section {
     position: static;
     flex-direction: row;
@@ -875,13 +931,258 @@ a {
     gap: 14px;
     padding: 10px 15px;
     box-sizing: border-box;
-    
   }
-  .comparison-yellow {
-    width: 110px !important;
+  .swiper-off {
+    width: auto !important;
     height: 290px !important;
-    flex-shrink: 0;
+    flex: 1;
+    min-width: 0;
     z-index: 1;
+    margin-right: -150px;
+  }
+
+  .comparison-yellow {
+    width: 150px !important;
+    height: 300px !important;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+    background: linear-gradient(#ff9500 0%, #f7944a 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2),
+      inset 0 0 30px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+  .comparison-yellow img {
+    width: 100px;
   }
   /* محصولات تخفیف دار */
+  /* برند ها */
+  .brand-on {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-on img {
+    width: 150px;
+  }
+  /* برند ها */
+  /* نظرات مشتری ها */
+  swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  
+  /* نظرات مشتری ها */
 }
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  /* هدر */
+  .contanier {
+    padding: 10px 20px;
+  }
+  .logo-contanier {
+    padding-right: 20px;
+    gap: 12px;
+  }
+  .search-container {
+    width: 300px;
+  }
+  .login-contanier {
+    padding-left: 20px;
+    gap: 10px;
+  }
+  .login-contanier-one {
+    width: 140px;
+    gap: 10px;
+  }
+  .login-contanier-one p {
+    font-size: 14px;
+  }
+  .login-contanier-one-yellow {
+    width: 75px;
+    height: 34px;
+  }
+
+  /* نوبار */
+  .menu-navbar {
+    width: auto;
+    gap: 20px;
+    font-size: 0.85rem;
+  }
+  .menu-phone {
+    font-size: 0.85rem;
+    margin-left: 10px;
+  }
+  .hamburger-icon-navbar-div {
+    font-size: 16px;
+  }
+
+  /* بنر */
+  .banner-img {
+    height: 70vh;
+  }
+  .image-weader img {
+    width: 200px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+
+  /* دسته بندی */
+  .Product-categories div img {
+    width: 140px;
+  }
+  .Product-categories div p {
+    font-size: 14px;
+  }
+
+  /* محصولات پرفروش */
+  .contanier-bestProducts {
+    margin-top: 60px;
+  }
+  .contanier-bestProducts-title {
+    padding: 20px 30px 80px 30px;
+  }
+  .contanier-bestProducts-title span {
+    width: 500px;
+  }
+  .contanier-bestProducts-title button {
+    width: 130px;
+    height: 44px;
+    font-size: 0.85rem;
+  }
+
+  .swiper {
+    width: 98%;
+    height: 320px;
+    bottom: 40px;
+  }
+  .swiper-wrapper {
+    margin-right: 50px;
+    gap: 16px;
+  }
+  .swiper-slide {
+    width: 200px !important;
+    height: 300px !important;
+  }
+
+  .details-products {
+    width: 175px;
+    height: 120px;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+  .product-img img {
+    width: 70px;
+  }
+  .product-img-glass img {
+    width: 120px;
+  }
+  .product-img-glass {
+    margin-top: 40px;
+  }
+  .product-img-table {
+    margin-top: 35px;
+  }
+  .product-img-table img {
+    width: 70px;
+  }
+
+  /* بنر کمپ یار */
+  .banner-campYar img {
+    width: 90%;
+    height: 400px;
+  }
+  .banner-button {
+    margin-right: 150px;
+    margin-bottom: 30px;
+  }
+  .banner-button button {
+    width: 200px;
+    height: 75px;
+    font-size: 1rem;
+  }
+
+  /* محصولات تخفیف دار */
+  .discount-section {
+    width: 98%;
+    gap: 16px;
+    bottom: 40px;
+  }
+  .comparison-yellow {
+    width: 180px !important;
+    height: 300px !important;
+    font-size: 0.85rem;
+  }
+  .swiper-off {
+    height: 300px;
+  }
+  .swiper-wrapper {
+    padding-right: 500px;
+  }
+
+  /* برند ها */
+  .brand-on {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-on img {
+    width: 250px;
+  }
+  /* برند ها */
+
+  /* کامت ها */
+  swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  /* کامت ها */
+}
+
+
+
+
+
+
+
+
+

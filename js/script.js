@@ -19,14 +19,52 @@ window.addEventListener("scroll", () => {
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: false,
-  slidesPerView: 4,
+  grabCursor: true,
   breakpoints: {
-    375: {
+    0: {
       slidesPerView: 1.5,
       spaceBetween: 14,
-      centeredSlides: false,
+    },
+    668: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 24,
     },
   },
-
 });
-// swapir محصولات پر فروش
+
+const swiperOff = new Swiper(".swiper-off", {
+  direction: "horizontal",
+  loop: false,
+  grabCursor: true,
+  rtl: true,
+  slidesPerView: 3,
+  spaceBetween: 24,
+  slidesOffsetBefore: 0,
+  slidesOffsetAfter: 0,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 14,
+    },
+    668: {
+      slidesPerView: 2.5,
+      spaceBetween: 16,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+  },
+});
+
+
+
+
+
+
+
+
