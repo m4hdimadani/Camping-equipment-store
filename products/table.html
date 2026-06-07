@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../hrader and footer/header.html" />
+    <link rel="stylesheet" href="../hrader and footer/footer.css " />
+
+    <title>کوله پشتی - کمپ یار</title>
+  </head>
+  <body>
+    <header class="contanier">
+      <!-- همبرگر موبایل مستقل -->
+      <div class="hamburger-icon-navbar-div-mobil">
+        <img src="../img/menu.svg" alt="menu" />
+      </div>
+
+      <!-- لوگو و سرچ -->
+
+      <div class="logo-contanier">
+        <div class="img-logo">
+          <a href="/">
+            <img src="../img/LOGO.png" alt="LOGO" />
+          </a>
+        </div>
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="نام محصول مورد نظر را وارد کنید"
+            class="search-input"
+          />
+          <img
+            src="../img/search-normal.svg"
+            alt="search"
+            class="search-icon"
+          />
+          <div class="search-results"></div>
+        </div>
+      </div>
+
+      <!-- ثبت نام و ورود -->
+      <div class="login-contanier">
+        <div class="login-contanier-one">
+          <div class="login-contanier-one-yellow">
+            <a href="#"><p>ثبت نام</p></a>
+          </div>
+          <a href="#"><p>ورود</p></a>
+        </div>
+        <div class="login-contanier-khat"><span>|</span></div>
+        <div class="login-contanier-bag">
+          <img src="../img/bag-one.svg" alt="bag" />
+        </div>
+      </div>
+    </header>
+    <!-- breadcrumb start-->
+    <div class="breadcrumb">
+      <a href="../index.html">دسته بندی محصولات</a>
+      <span>›</span>
+      <a href="#"> میز</a>
+      <span>›</span>
+      <p> میز مسافرتی</p>
+    </div>
+    <!-- breadcrumb end-->
+
+    <!-- محتوای اصلی -->
+    <div class="product-page">
+      <!-- سمت چپ — اطلاعات -->
+      <div class="product-info">
+        <h1 class="product-title"> میز مسافرتی</h1>
+
+        <div class="product-rating">
+          <div class="stars">
+            <img src="../img/star.png" alt="star" />
+            <img src="../img/star.png" alt="star" />
+            <img src="../img/star.png" alt="star" />
+            <img src="../img/star.png" alt="star" />
+            <img src="../img/star (1).png" alt="star" />
+          </div>
+          <span>(156)</span>
+          <span class="brand-name">table</span>
+        </div>
+
+        <!-- مشخصات -->
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-label">برند</span>
+            <span class="spec-value">table</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">رنگ</span>
+            <span class="spec-value"> خاکستری</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">ابعاد</span>
+            <span class="spec-value">50 * 25 cm </span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">وزن</span>
+            <span class="spec-value">500gm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">مناسب</span>
+            <span class="spec-value">کمپینگ، طبیعت‌گردی</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">جنس قیمت</span>
+            <span class="spec-value">چوب</span>
+          </div>
+
+        
+          <div class="spec-row">
+            <span class="spec-label">قیمت اصلی</span>
+            <span class="spec-value spec-original-price">4.900.000 تومان</span>
+          </div>
+        </div>
+
+        <!-- قیمت و خرید -->
+        <div class="product-buy">
+          <div class="product-price-box">
+            <p class="product-final-price">2.500.000 <span>تومان</span></p>
+          </div>
+          <div class="product-actions">
+            <button class="btn-wishlist">
+              <img src="../img/heart.png" alt="heart" />
+            </button>
+            <div class="quantity-control">
+              <button class="qty-btn" id="qty-plus">+</button>
+              <span id="qty-value">1</span>
+              <button class="qty-btn" id="qty-minus">-</button>
+            </div>
+            <button class="btn-add-to-cart">افزودن به سبد خرید</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- سمت راست — عکس -->
+      <div class="product-images">
+        <div class="product-main-img">
+          <img
+            src="../img/product/download-removebg-preview 2.png"
+            alt="backpack"
+            id="main-product-img"
+          />
+        </div>
+        <div class="product-thumbnails">
+          <img
+            src="../img/product/download-removebg-preview 2.png"
+            alt="tent"
+            class="thumb active"
+            onclick="changeImg(this)"
+          />
+          <img
+            src="../img/product/download-removebg-preview 2.png"
+            alt="tent"
+            class="thumb"
+            onclick="changeImg(this)"
+          />
+          <img
+            src="../img/product/download-removebg-preview 2.png"
+            alt="tent"
+            class="thumb"
+            onclick="changeImg(this)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- توضیحات -->
+    <div class="product-description">
+      <h2>توضیحات محصول</h2>
+      <div class="description-content">
+        <p>⭐ با یاد آوردن تجربیات فراموش‌نشدنی تبدیل کنید!</p>
+        <p>
+      سبک تاشو و فوق‌العاده مقاوم؛ پایه‌ای ثابت برای وعده‌های غذایی شما در
+          دل طبیعت. این میز در عرض چند ثانیه برپا می‌شود تا راحتی خانه را به قلب
+          کوه و جنگل ببرید.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <!-- خط بالای فوتر -->
+      <div class="footer-top">
+        <div class="footer-top-left">
+          <p>021-111111 | 24 ساعته پاسخگوی شما هستیم تلفن پشتیبانی</p>
+        </div>
+        <div class="footer-top-right">
+          <img src="../img/LOGO.png" alt="logo" class="footer-logo" />
+        </div>
+      </div>
+
+      <!-- Ellipse پشتی -->
+      <div class="footer-ellipse">
+        <img src="../img/Ellipse 45.png" alt="ellipse" />
+      </div>
+
+      <!-- آیکون های خدمات -->
+      <div class="footer-services">
+        <div class="footer-service-item">
+          <img src="../img/footer svg/group.svg" alt="delivery" />
+          <p>امکان تحویل در محل</p>
+        </div>
+        <div class="footer-service-item">
+          <img src="../img/footer svg/note-2.svg" alt="payment" />
+          <p>امکان پرداخت در محل</p>
+        </div>
+        <div class="footer-service-item">
+          <img src="../img/footer svg/headphone.svg" alt="support" />
+          <p>پاسخگویی 24 ساعته</p>
+        </div>
+        <div class="footer-service-item">
+          <img src="../img/footer svg/verify.svg" alt="guarantee" />
+          <p>ضمانت اصل بودن کالا</p>
+        </div>
+      </div>
+
+      <!-- محتوای اصلی فوتر -->
+      <div class="footer-main">
+        <!-- خدمات مشتریان -->
+        <div class="footer-col">
+          <h3>خدمات مشتریان</h3>
+          <ul>
+            <li><a href="#">شرایط استفاده</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">پاسخ به پرسش های متداول</a></li>
+          </ul>
+        </div>
+
+        <!-- راهنمای خرید -->
+        <div class="footer-col">
+          <h3>راهنمای خرید</h3>
+          <ul>
+            <li><a href="#">نحوه ثبت سفارش</a></li>
+            <li><a href="#">رویه ارسال سفارش</a></li>
+            <li><a href="#">شیوه های پرداخت</a></li>
+          </ul>
+        </div>
+
+        <!-- محصولات -->
+        <div class="footer-col">
+          <h3>محصولات</h3>
+          <ul>
+            <li><a href="#">چادر</a></li>
+            <li><a href="#">کوله پشتی</a></li>
+            <li><a href="#">میز و صندلی</a></li>
+            <li><a href="#">وسایل آشپزی</a></li>
+          </ul>
+        </div>
+
+        <!-- با کمپ یار -->
+        <div class="footer-col">
+          <h3>با کمپ یار</h3>
+          <ul>
+            <li><a href="#">گزارش تخلف در کمپ یار</a></li>
+            <li><a href="#">تماس با کمپ یار</a></li>
+            <li><a href="#">درباره کمپ یار</a></li>
+          </ul>
+        </div>
+        <!-- همراه ما باشید -->
+        <div class="footer-col footer-social">
+          <h3>همراه ما باشید !</h3>
+          <div class="footer-social-icons">
+            <a href="#"
+              ><img src="../img/footer svg/instagram.svg" alt="instagram"
+            /></a>
+            <a href="#"
+              ><img src="../img/footer svg/Twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img src="../img/footer svg/whatsapp.svg" alt="whatsapp"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ایمیل -->
+      <div class="footer-email">
+        <p>با ثبت ایمیل از جدیدترین تخفیف ها باخبر شوید !</p>
+        <div class="footer-email-input">
+          <button>
+            <img src="../img/footer svg/tick-circle.svg" alt="submit" />
+          </button>
+          <input type="email" placeholder="ایمیل خود را وارد کنید" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+  </body>
+</html>

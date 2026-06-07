@@ -70,10 +70,10 @@ const swiperOff = new Swiper(".swiper-off", {
 // سرچ کردن
 // داده محصولات - از HTML بخون یا اینجا تعریف کن
 const products = [
-  { name: "کوله پشتی", img: "./img/product/61mbnbBi2CL._AC_SL1500_-removebg-preview 1.png", price: "2.500.000", type: "product-img" },
-  { name: "میز", img: "./img/product/download-removebg-preview 2.png", price: "2.500.000", type: "product-img-table" },
-  { name: "ماگ", img: "./img/product/mug image.png", price: "2.500.000", type: "product-img-table" },
-  { name: "عینک", img: "./img/product/sunset-reflection-sunglasses-nature-elegance-generated-by-ai-removebg-preview 1.png", price: "2.500.000", type: "product-img-glass" },
+  { name: "کوله پشتی", img: "./img/product/61mbnbBi2CL._AC_SL1500_-removebg-preview 1.png", price: "2.500.000", type: "product-img" , url: "../products/backpack.html" } ,
+  { name: "میز", img: "./img/product/download-removebg-preview 2.png", price: "2.500.000", type: "product-img-table", url: "../products/tant.html"  },
+  { name: "ماگ", img: "./img/product/mug image.png", price: "2.500.000", type: "product-img-table", url: "../products/mug.html"  },
+  { name: "عینک", img: "./img/product/sunset-reflection-sunglasses-nature-elegance-generated-by-ai-removebg-preview 1.png", price: "2.500.000", type: "product-img-glass", url: "../products/sunglasses.html"  },
 ];
 
 const searchInput = document.querySelector(".search-input");
@@ -94,14 +94,14 @@ searchInput.addEventListener("input", () => {
     searchResults.innerHTML = `<div class="search-no-result">محصولی یافت نشد</div>`;
   } else {
     searchResults.innerHTML = filtered.map(p => `
-      <div class="search-result-item">
-        <img src="${p.img}" alt="${p.name}" />
-        <div class="search-result-info">
-          <p class="search-result-name">${p.name}</p>
-          <p class="search-result-price">${p.price} <span>تومان</span></p>
-        </div>
+    <a href="${p.url}" class="search-result-item">
+      <img src="${p.img}" alt="${p.name}" />
+      <div class="search-result-info">
+        <p class="search-result-name">${p.name}</p>
+        <p class="search-result-price">${p.price} <span>تومان</span></p>
       </div>
-    `).join("");
+    </a>
+  `).join("");
   }
 
   searchResults.style.display = "block";
