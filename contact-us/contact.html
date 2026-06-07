@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./contact.css" />
+  <link rel="stylesheet" href="../css/font.css" />
+  <link rel="stylesheet" href="../hrader and footer/header.css" />
+  <title>تماس با ما - کمپ یار</title>
+</head>
+<body>
+
+  <!-- هدر -->
+  <header class="contanier">
+    <!-- همبرگر موبایل مستقل -->
+    <div class="hamburger-icon-navbar-div-mobil  "  >
+      <img src="../img/menu.svg" alt="menu" >
+    </div>
+  
+    <!-- لوگو و سرچ -->
+  
+      <div class="logo-contanier">
+        <div class="img-logo">
+          <a href="/">
+            <img src="../img/LOGO.png" alt="LOGO" />
+          </a>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input" />
+        <img src="../img/search-normal.svg" alt="search" class="search-icon" />
+        <div class="search-results"></div>
+      </div>
+      </div>
+  
+    <!-- ثبت نام و ورود -->
+    <div class="login-contanier">
+      <div class="login-contanier-one">
+        <div class="login-contanier-one-yellow">
+          <a href="#"><p>ثبت نام</p></a>
+        </div>
+        <a href="#"><p>ورود</p></a>
+      </div>
+      <div class="login-contanier-khat"><span>|</span></div>
+      <div class="login-contanier-bag">
+        <img src="../img/bag-one.svg" alt="bag" />
+      </div>
+    </div>
+
+  </header>
+
+  <!-- بخش اول - معرفی -->
+  <section class="contact-intro">
+    <p>ما در کمپ یار همراه شما تجربه های بی نظیر کمپینگ و ماجراجویی در طبیعت را داشته باشید.</p>
+    <p>سوالی دارید ؟ نیاز به مشاوره برای خرید لوازم کمپینگ دارید ؟ یا می خواهید درباره سفارش تان صحبت کنیم ؟</p>
+    <p>تیم ما آماده پاسخگویی به شماست !</p>
+  </section>
+
+  <!-- بخش دوم - اطلاعات تماس -->
+  <section class="contact-info-grid">
+    <div class="contact-info-item">
+      <div class="contact-info-icon">
+        <img src="../img/contact/call-received.svg" alt="phone" />
+      </div>
+      <div class="contact-info-content">
+        <span class="contact-info-label">اطلاعات تماس</span>
+        <span class="contact-info-value">0212223443</span>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-info-icon">
+        <img src="../img/contact/clock.svg" alt="clock" />
+      </div>
+      <div class="contact-info-content">
+        <span class="contact-info-label">ساعات کاری</span>
+        <span class="contact-info-value">9 صبح تا 6 عصر / شنبه تا پنج شنبه</span>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-info-icon">
+        <img src="../img/contact/direct-inbox.svg" alt="email" />
+      </div>
+      <div class="contact-info-content">
+        <span class="contact-info-label">ایمیل</span>
+        <span class="contact-info-value">support@campyar.com</span>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-info-icon">
+        <img src="../img/contact/map.svg" alt="location" />
+      </div>
+      <div class="contact-info-content">
+        <span class="contact-info-label">آدرس</span>
+        <span class="contact-info-value">تهران، خیابان طبیعت، کوچه ماجراجویی، پلاک 123، فروشگاه کمپینگ کمپ یار</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش سوم - نقشه و فرم -->
+  <section class="contact-main">
+
+    <!-- نقشه -->
+    <div class="contact-map-box">
+      <div class="map">
+        <img src="../img/contact/screencapture-khanoumi-contact-us-2025-09-12-12_06_34 1.png" alt="map">
+      </div>
+      <button class="btn-navigate">
+        <img src="../img/contact/location.svg" alt="navigate" />
+        مسیریابی با نشان
+      </button>
+    </div>
+
+    <!-- فرم -->
+    <div class="contact-form-box">
+      <h2>با ما در تماس باشید !</h2>
+      <p>هر سوالی دارید از طریق فرم زیر برای ما بفرستید. تیم ما در سریع ترین زمان ممکن پاسخ شما را خواهد داد.</p>
+
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label>نام و نام خانوادگی</label>
+          <input type="text" placeholder="نام و نام خانوادگی" id="contact-name" />
+        </div>
+        <div class="form-group">
+          <label>شماره تماس</label>
+          <input type="tel" placeholder="شماره تماس" id="contact-phone" />
+        </div>
+        <div class="form-group">
+          <label>ایمیل</label>
+          <input type="email" placeholder="ایمیل" id="contact-email" />
+        </div>
+        <div class="form-group">
+          <label>پیام</label>
+          <textarea placeholder="پیام" id="contact-message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">ارسال</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- بخش چهارم - شبکه اجتماعی -->
+  <section class="contact-social">
+    <p>عاشق ماجراجویی هستید؟</p>
+    <p>ما را در شبکه های اجتماعی دنبال کنید.</p>
+    <p>تا از جدیدترین محصولات، تخفیف ها و نکات کمپینگ باخبر شوید!</p>
+    <div class="contact-social-icons">
+      <a href="#">
+        <img src="../img/footer svg/whatsapp.svg" alt="whatsapp" />
+      </a>
+      <a href="#">
+        <img src="../img/footer svg/instagram.svg" alt="instagram" />
+      </a>
+      <a href="#">
+        <img src="../img/footer svg/Twitter.svg" alt="twitter" />
+      </a>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>
