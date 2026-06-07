@@ -65,6 +65,95 @@ a {
 .search-input::placeholder {
   color: #888;
 }
+/*   سرچ */
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 99999;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.search-results::-webkit-scrollbar {
+  width: 4px;
+}
+.search-results::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  direction: rtl;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: rgba(238, 187, 25, 0.1);
+}
+
+.search-result-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.search-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-result-name {
+  color: #fff;
+  font-family: YekanBakhMedium;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.search-result-price {
+  color: #eebb19;
+  font-family: YekanBakhMedium;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.search-result-price span {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-no-result {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: YekanBakhMedium;
+  font-size: 0.9rem;
+  direction: rtl;
+}
+/* سرچ */
 
 .login-contanier {
   display: flex;
@@ -1017,7 +1106,7 @@ swiper-slide img {
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
-.search-input {
+.search-input-mobil{
   width: 90%;
   height: 50px;
   background: transparent;
@@ -1026,11 +1115,11 @@ swiper-slide img {
   font-family: iranyekanwebmedium;
   font-size: .7rem;
 }
-.search-input:focus {
+.search-input-mobil:focus {
   outline: none;
   box-shadow: none;
 }
-.search-icon {
+.search-icon-mobil {
   position: absolute;
   left: 15px;
   color: #ffd700;
@@ -1038,7 +1127,7 @@ swiper-slide img {
   pointer-events: none;
   width: 20px;
 }
-.search-input::placeholder {
+.search-icon-mobil::placeholder {
   color: #888;
 }
 
