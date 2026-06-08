@@ -213,6 +213,141 @@ a {
   display: none;
 }
 
+/* مودال ثبت نام */
+.auth-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 20000;
+}
+.auth-overlay.active { display: block; }
+
+.auth-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  z-index: 20001;
+  direction: rtl;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+}
+.auth-modal.active { display: block; }
+
+.auth-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.auth-logo { width: 100px; }
+.auth-back, .auth-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.auth-back:hover, .auth-close:hover { color: #fff; }
+.auth-back img {
+  width: 20px;
+  filter: brightness(0) invert(0.7);
+}
+
+.auth-step h2 {
+  color: #fff;
+  font-family: YekanBakhHeavy;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.auth-hello {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: YekanBakhMedium;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.auth-desc {
+  color: rgba(255, 255, 255, 0.55);
+  font-family: iranyekanwebregular, sans-serif;
+  font-size: 0.88rem;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.auth-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.auth-input {
+  width: 100%;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  direction: ltr;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+.auth-input:focus { border-color: #eebb19; }
+.auth-input.error { border-color: #ff4444; }
+
+.auth-error {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  text-align: right;
+  display: none;
+  padding-right: 4px;
+}
+.auth-error.show { display: block; }
+
+.auth-btn {
+  width: 100%;
+  height: 52px;
+  background: #eebb19;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-family: YekanBakhHeavy;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 16px;
+}
+.auth-btn:hover { background: #ffd900c7; }
+
+.auth-terms {
+  color: #fff;
+  font-family: iranyekanwebmedium;
+  font-size: .6rem;
+  text-align: center;
+}
+/* مودال ثبت نام */
+
 /* نوبار */
 .main-navbar {
   position: fixed;
@@ -1036,6 +1171,8 @@ swiper-slide img {
     width: 25px;
     height: 25px;
   }
+  .auth-modal { width: 92%; padding: 20px; }
+  .auth-logo { width: 85px; }
   /* bag */
   /* همبرگر منو */
   .hamburger-icon-navbar-div-mobil  {

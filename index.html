@@ -42,16 +42,15 @@
             <div class="login-contanier">
               <div class="login-contanier-one">
                 <div class="login-contanier-one-yellow">
-                  <a href="#"><p>ثبت نام</p></a>
+                  <a href="#" id="btn-register"><p>ثبت نام</p></a>
                 </div>
-                <a href="#"><p>ورود</p></a>
+                <a href="#" id="btn-login"><p>ورود</p></a>
               </div>
               <div class="login-contanier-khat"><span>|</span></div>
               <div class="login-contanier-bag">
                 <img src="./img/bag-one.svg" alt="bag" />
               </div>
             </div>
-        
           </header>
           
           <!-- mobile menu -->
@@ -1113,6 +1112,32 @@
     </footer>
     <!-- footer end -->
     <!-- fotter end -->
+
+
+    <!-- modal auth start -->
+    <div class="auth-overlay" id="auth-overlay"></div>
+    <div class="auth-modal" id="auth-modal">
+      <div class="auth-modal-header">
+        <button class="auth-close" id="auth-close">✕</button>
+        <img src="./img/LOGO.png" alt="logo" class="auth-logo" />
+        <button class="auth-back" id="auth-back">
+          <img src="./img/arrow right.svg" alt="back" />
+        </button>
+      </div>
+      <div class="auth-step" >
+        <h2>ورود | ثبت نام</h2>
+        <p class="auth-hello">سلام</p>
+        <p class="auth-desc">لطفا شماره موبایل یا ایمیل خود را وارد کنید.</p>
+        <div class="auth-input-box">
+          <input type="text" id="auth-input" placeholder="09211111111" class="auth-input" />
+          <span class="auth-error" id="auth-error">لطفا این قسمت را خانی نگذارید</span>
+        </div>
+        <button class="auth-btn" id="auth-submit">ورود</button>
+        <p class="auth-terms">
+          ورود شما به معنای <span>پذیرش شرایط</span> کمپ یار و <span>قوانین حریم خصوصی</span> است.
+        </p>
+      </div>
+    <!-- modal auth end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
     <script src="./js/script.js"></script>
