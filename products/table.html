@@ -45,13 +45,21 @@
       <div class="login-contanier">
         <div class="login-contanier-one">
           <div class="login-contanier-one-yellow">
-            <a href="#"><p>ثبت نام</p></a>
+            <a href="#" id="btn-register"><p>ثبت نام</p></a>
           </div>
-          <a href="#"><p>ورود</p></a>
+          <a href="#" id="btn-login"><p>ورود</p></a>
         </div>
         <div class="login-contanier-khat"><span>|</span></div>
+       
         <div class="login-contanier-bag">
-          <img src="../img/bag-one.svg" alt="bag" />
+        <a href="../buy-cart/buy.html">
+          <div class="login-contanier-bag">
+            <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+              <img src="../img/bag-one.svg" alt="bag" />
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+          </div>
+        </a>
         </div>
       </div>
     </header>
@@ -61,7 +69,7 @@
       <span>›</span>
       <a href="#"> میز</a>
       <span>›</span>
-      <p> میز مسافرتی</p>
+      <p>میز مسافرتی</p>
     </div>
     <!-- breadcrumb end-->
 
@@ -69,7 +77,7 @@
     <div class="product-page">
       <!-- سمت چپ — اطلاعات -->
       <div class="product-info">
-        <h1 class="product-title"> میز مسافرتی</h1>
+        <h1 class="product-title">میز مسافرتی</h1>
 
         <div class="product-rating">
           <div class="stars">
@@ -110,7 +118,6 @@
             <span class="spec-value">چوب</span>
           </div>
 
-        
           <div class="spec-row">
             <span class="spec-label">قیمت اصلی</span>
             <span class="spec-value spec-original-price">4.900.000 تومان</span>
@@ -131,7 +138,14 @@
               <span id="qty-value">1</span>
               <button class="qty-btn" id="qty-minus">-</button>
             </div>
-            <button class="btn-add-to-cart">افزودن به سبد خرید</button>
+            <button class="btn-add-to-cart"
+            data-name=" میز"
+            data-price="2.500.000"
+            data-code="32678"
+            data-img="../img/product/download-removebg-preview 2.png"
+            onclick="addToCart(this.dataset.name, this.dataset.price, this.dataset.img, this.dataset.code); window.location.href='../buy-cart/buy.html'">
+            افزودن به سبد خرید
+          </button>
           </div>
         </div>
       </div>
@@ -174,7 +188,7 @@
       <div class="description-content">
         <p>⭐ با یاد آوردن تجربیات فراموش‌نشدنی تبدیل کنید!</p>
         <p>
-      سبک تاشو و فوق‌العاده مقاوم؛ پایه‌ای ثابت برای وعده‌های غذایی شما در
+          سبک تاشو و فوق‌العاده مقاوم؛ پایه‌ای ثابت برای وعده‌های غذایی شما در
           دل طبیعت. این میز در عرض چند ثانیه برپا می‌شود تا راحتی خانه را به قلب
           کوه و جنگل ببرید.
         </p>
@@ -288,6 +302,8 @@
       </div>
     </footer>
 
+    
+    <script src="../buy-cart/buy.js"></script>
     <script src="../js/products.js"></script>
   </body>
 </html>

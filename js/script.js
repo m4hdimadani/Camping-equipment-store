@@ -194,3 +194,19 @@ authSubmit.addEventListener("click", () => {
   step2.classList.remove("hidden");
 });
 // modal auth
+
+// counter bag 
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let count = 0;
+
+  cart.forEach(item => {
+    count += item.qty;
+  });
+
+  document.getElementById("cart-count").innerText = count;
+}
+
+updateCartCount();
+// counter bag 

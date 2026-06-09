@@ -1161,6 +1161,30 @@ swiper-slide img {
 
 
   /* bag */
+ 
+  .cart-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #eebb19;
+    color: #000;
+    font-family: YekanBakhHeavy;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .cart-count.show {
+    display: flex;
+  }
   .login-contanier-one {
     display: none;
   }

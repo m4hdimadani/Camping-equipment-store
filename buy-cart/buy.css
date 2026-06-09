@@ -1,0 +1,525 @@
+body {
+    background-color: #000;
+    min-height: 100vh;
+  }
+  
+  /* هدر */
+  .cart-page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .cart-header-logo { width: 120px; }
+  
+  /* استپ‌ها */
+  .cart-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 30px 20px;
+    direction: ltr;
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(99,98,98,0.2);
+    border: 2px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  .step-icon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(0.4);
+  }
+  .step span {
+    color: rgba(255,255,255,0.4);
+    font-family: YekanBakhMedium;
+    font-size: 0.85rem;
+  }
+  .step.active .step-icon {
+    background: #eebb19;
+    border-color: #eebb19;
+    box-shadow: 0 0 20px rgba(238,187,25,0.4);
+  }
+  .step.active .step-icon img {
+    filter: brightness(0) invert(1);
+  }
+  .step.active span { color: #eebb19; }
+  
+  .step-line {
+    width: 80px;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+  }
+  
+  /* محتوای اصلی */
+  .cart-page-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 20px 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    direction: rtl;
+    align-items: flex-start;
+  }
+  
+  /* سمت راست - آیتم‌ها */
+  .cart-title {
+    color: #fff;
+    width: 670px;
+    height: 69px;
+    background: rgba(30,30,30,0.8);
+    border-radius: 24px;
+    font-family: iranyekanwebmedium;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-top: -15px;
+  }
+  .cart-items-section {
+    flex: 1.4;
+    padding: 20px;
+  }
+  .cart-item {
+    background: rgba(30,30,30,0.8);
+    border-radius: 24px;
+    padding: 30px 20px;
+  }
+  .cart-items-section h2,
+  .cart-summary-section h2 {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  
+  .cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* آیتم سبد */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cart-item-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .cart-item-counter {
+    width: 102px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .qty-btn {
+    background: rgba(30,30,30,0.8);
+    border: none;
+    color: #4caf50;
+    cursor: pointer;
+  }
+  .cart-item img {
+    width: 252px;
+    height: 196px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .cart-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cart-item-card-name {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.95rem;
+  }
+  .cart-item-card-code {
+    color: rgba(255,255,255,0.4);
+    font-family: iranyekanwebregular;
+    font-size: 0.78rem;
+  }
+  .cart-item-card-delivery {
+    color: rgba(255,255,255,0.5);
+    font-family: iranyekanwebregular;
+    font-size: 0.78rem;
+  }
+  .cart-item-card-prices {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .cart-item-card-original {
+    color: rgba(255,255,255,0.35);
+    font-family: YekanBakhMedium;
+    font-size: 0.82rem;
+    text-decoration: line-through;
+  }
+  .cart-item-card-final {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.95rem;
+  }
+  .cart-item-card-badge {
+    background: #eebb19;
+    color: #000;
+    font-family: YekanBakhHeavy;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+  
+  .cart-item-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .cart-qty-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 4px 10px;
+  }
+  .cart-qty-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+  .cart-qty-btn:hover { background: rgba(238,187,25,0.2); }
+  .cart-qty-value {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.9rem;
+    min-width: 20px;
+    text-align: center;
+  }
+  .cart-item-remove {
+    background: none;
+    border: none;
+    color: rgba(255,80,80,0.6);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: iranyekanwebregular;
+    transition: color 0.2s;
+  }
+  .cart-item-remove:hover { color: #ff4444; }
+  
+  /* خالی بودن سبد */
+  .cart-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 16px;
+  }
+  .cart-empty-state img { width: 70px; opacity: 0.25; }
+  .cart-empty-state p {
+    color: rgba(255,255,255,0.35);
+    font-family: iranyekanwebregular;
+    font-size: 0.9rem;
+  }
+  .cart-empty-state a {
+    color: #eebb19;
+    font-family: YekanBakhMedium;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid #eebb19;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background 0.2s;
+  }
+  .cart-empty-state a:hover { background: rgba(238,187,25,0.1); }
+  
+  /* سمت چپ - خلاصه */
+  .cart-summary-section {
+    flex: 0.8;
+    background: rgba(30,30,30,0.8);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .summary-label {
+    color: rgba(255,255,255,0.55);
+    font-family: iranyekanwebregular;
+    font-size: 0.85rem;
+  }
+  .summary-value {
+    color: #fff;
+    font-family: YekanBakhMedium;
+    font-size: 0.9rem;
+  }
+  .discount-value { color: #4caf50 !important; }
+  .free-shipping { color: rgba(255,255,255,0.4) !important; font-size: 0.8rem !important; }
+  
+  .summary-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 8px 0;
+  }
+  .total-row .summary-label { color: #fff; font-family: YekanBakhMedium; }
+  .total-value {
+    color: #fff !important;
+    font-family: YekanBakhHeavy !important;
+    font-size: 1rem !important;
+  }
+  
+  .btn-checkout {
+    width: 100%;
+    height: 50px;
+    background: #eebb19;
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .btn-checkout:hover { background: #ffd900c7; }
+  
+  /* کد تخفیف */
+  .discount-code-box {
+    display: flex;
+    gap: 8px;
+    direction: rtl;
+  }
+  .discount-input {
+    flex: 1;
+    height: 42px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    color: #fff;
+    font-family: iranyekanwebregular;
+    font-size: 0.82rem;
+    padding: 0 12px;
+    outline: none;
+    direction: rtl;
+    transition: border-color 0.2s;
+  }
+  .discount-input::placeholder { color: rgba(255,255,255,0.25); }
+  .discount-input:focus { border-color: #eebb19; }
+  .btn-apply-discount {
+    height: 42px;
+    padding: 0 14px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    color: rgba(255,255,255,0.7);
+    font-family: YekanBakhMedium;
+    font-size: 0.82rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .btn-apply-discount:hover {
+    background: rgba(238,187,25,0.1);
+    border-color: #eebb19;
+    color: #eebb19;
+  }
+  /* none products */
+  .none-product {
+    background-color: #eebb19;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .none-product h1 {
+    color: #fff;
+    font-family: iranyekanwebmedium;
+    font-size: 1.5rem;
+  }
+
+  .none-product p {
+    color: #fff;
+    font-family: iranyekanwebmedium;
+  }
+
+  .none-product-button {
+    background-color: #F7E199;
+    width: 324px;
+    height: 56px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: iranyekanwebmedium;
+    font-size: .9rem;
+  }
+  .none-product-button:hover {
+    background-color: #f5d670;
+  }
+  /* none products */
+  /* modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: iranyekanwebmedium;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+  }
+  
+  .modal {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+  }
+  .modal {
+    color: #fff;
+    font-size: .8rem;
+  }
+  .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    font-family: iranyekanwebmedium;
+    width: 250px;
+  }
+  
+  .modal-buttons button {
+    
+    flex: 1;
+    cursor: pointer;
+    font-family: iranyekanwebmedium;
+  }
+  .confirmDelete {
+    background-color: #ec1b1b;
+    width: 111px;
+    height: 50px;
+    border-radius: 24px;
+    border: none;
+    font-size: .9rem;
+  }
+  .confirmDelete:hover {
+    background-color: #ff4444;
+  }
+  .cancelDelete {
+    background-color: #1a1a1a;
+    width: 111px;
+    height: 50px;
+    border-radius: 24px;
+    border: none;
+    color: grey;
+    font-size: .9rem;
+  }
+  .cancelDelete:hover {
+    background-color: #525151;
+  }
+  /* modal */
+  
+  /* موبایل */
+  @media (max-width: 667px) {
+    .cart-page-content {
+      flex-direction: column;
+      padding: 16px;
+    }
+    .cart-steps { gap: 0; }
+    .step-line { width: 40px; }
+    .step-icon { width: 48px; height: 48px; }
+    .step-icon img { width: 22px; height: 22px; }
+    .cart-item-card { flex-wrap: wrap; }
+    .cart-summary-section { position: static; }
+
+    .none-product h1 {
+      color: #fff;
+      font-family: iranyekanwebmedium;
+      font-size: 1rem;
+    }
+  
+    .none-product p {
+      color: #fff;
+      font-family: iranyekanwebmedium;
+      text-align: center;
+    }
+  
+    .none-product-button {
+      background-color: #F7E199;
+      width: 224px;
+      height: 56px;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      font-family: iranyekanwebmedium;
+      font-size: .8rem;
+    }
+    .none-product-button:hover {
+      background-color: #f5d670;
+    }
+  }
+  
+  /* تبلت */
+  @media (min-width: 667px) and (max-width: 1024px) {
+    .cart-page-content { padding: 16px 20px; }
+    .step-line { width: 50px; }
+  }

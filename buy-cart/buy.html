@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./buy.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <title>سبد خرید - کمپ یار</title>
+  </head>
+  <body>
+    <!-- هدر ساده -->
+    <div class="cart-page-header">
+      <a href="/">
+        <img src="../img/LOGO.png" alt="logo" class="cart-header-logo" />
+      </a>
+    </div>
+
+    <!-- استپ‌ها -->
+    <div class="cart-steps">
+      <div class="step active">
+        <div class="step-icon">
+          <img src="../img/footer svg/group.svg" alt="cart" />
+        </div>
+        <span>سبد خرید</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <div class="step-icon">
+          <img src="../img/footer svg/note-2.svg" alt="order" />
+        </div>
+        <span>تکمیل سفارش</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <div class="step-icon">
+          <img src="../img/footer svg/verify.svg" alt="payment" />
+        </div>
+        <span>تسویه حساب</span>
+      </div>
+    </div>
+
+    <!-- محتوای اصلی -->
+    <div class="cart-page-content">
+     
+
+      <!-- سمت چپ — جزئیات -->
+      <div class="cart-summary-section" id="cart-summary">
+        <h2>جزئیات سبد خرید</h2>
+
+        <div class="summary-row">
+          <span class="summary-label">قیمت محصولات :</span>
+          <span class="summary-value" id="summary-total">0 تومان</span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">سود شما از خرید (%) :</span>
+          <span class="summary-value discount-value" id="summary-discount"
+            >0 تومان</span
+          >
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">هزینه ارسال :</span>
+          <span class="summary-value free-shipping">وابسته به آدرس</span>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-row total-row">
+          <span class="summary-label">مبلغ قابل پرداخت :</span>
+          <span class="summary-value total-value" id="summary-payable"
+            >0 تومان</span
+          >
+        </div>
+
+        <button class="btn-checkout">تکمیل سفارش</button>
+
+        <!-- کد تخفیف -->
+        <div class="discount-code-box">
+          <input
+            type="text"
+            placeholder="کد تخفیف را اینجا وارد کنید"
+            class="discount-input"
+            id="discount-input"
+          />
+          <button class="btn-apply-discount" id="btn-apply-discount">
+            بررسی کد
+          </button>
+        </div>
+      </div>
+       <!-- سمت راست — آیتم‌های سبد -->
+       <div class="cart-items-section">
+        <div class="cart-items-list" id="cart-items-list">
+          <!-- آیتم‌ها اینجا رندر میشن -->
+        </div>
+      </div>
+    </div>
+    <!-- modal remove -->
+    <div class="modal-overlay" id="deleteModal">
+      <div class="modal">
+        <img src="../img/warning-2.svg" alt="warning" />
+        <h3>حذف از سبد خرید</h3>
+        <p>آیا از حذف این محصول مطمئن هستید؟</p>
+
+        <div class="modal-buttons">
+          <button id="confirmDelete" class="confirmDelete">حذف</button>
+          <button id="cancelDelete" class="cancelDelete">انصراف</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./buy.js"></script>
+    <script src="../js/products.js"></script>
+  </body>
+</html>

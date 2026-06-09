@@ -134,7 +134,14 @@
               <span id="qty-value">1</span>
               <button class="qty-btn" id="qty-minus">-</button>
             </div>
-            <button class="btn-add-to-cart">افزودن به سبد خرید</button>
+            <button class="btn-add-to-cart"
+            data-name=" کوله پشتی"
+            data-price="2500000"
+            data-code="32679"
+            data-img="../img/product/61mbnbBi2CL._AC_SL1500_-removebg-preview 1.png"
+            onclick="addToCart(this.dataset.name, this.dataset.price, this.dataset.img, this.dataset.code); window.location.href='../buy-cart/buy.html'">
+            افزودن به سبد خرید
+          </button>
           </div>
         </div>
       </div>
@@ -291,6 +298,7 @@
       </div>
     </footer>
 
+    <script src="../buy-cart/buy.js"></script>
     <script src="../js/products.js"></script>
   </body>
 </html>

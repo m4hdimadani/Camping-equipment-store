@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./buy-cart/buy.css" />
 
     <title>فروشگاه لواز کمپینگ</title>
   </head>
@@ -47,8 +48,17 @@
                 <a href="#" id="btn-login"><p>ورود</p></a>
               </div>
               <div class="login-contanier-khat"><span>|</span></div>
+             
               <div class="login-contanier-bag">
-                <img src="./img/bag-one.svg" alt="bag" />
+              <a href="./buy-cart/buy.html">
+                <div class="login-contanier-bag">
+                  <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+                    <img src="./img/bag-one.svg" alt="bag" />
+                    <span class="cart-count" id="cart-count">0</span>
+                  </div>
+                </div>
+              </a>
+          
               </div>
             </div>
           </header>
@@ -1138,6 +1148,7 @@
         </p>
       </div>
     <!-- modal auth end -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
     <script src="./js/script.js"></script>
