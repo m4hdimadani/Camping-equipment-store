@@ -383,7 +383,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 50px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: YekanBakhHeavy;
 }
 .menu-navbar a {
@@ -523,14 +523,30 @@ a {
   text-align: center;
   margin-top: 40px;
 }
+.Product-categories div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.Product-categories div a:hover {
+  transform: translateY(-6px);
+}
 
-.Product-categories div img {
+.Product-categories div a img {
+  transition: transform 0.3s ease, filter 0.3s ease, drop-shadow 0.3s ease;
   width: 250px;
 }
-.Product-categories div p {
+
+.Product-categories div a p {
   font-size: 20px;
   color: #fff;
   font-family: YekanBakhMedium;
+  transition: color 0.3s ease;
+}
+.Product-categories div a:hover p {
+  color: #eebb19;
 }
 
 /* دسته بندی محصولات */
@@ -547,7 +563,7 @@ a {
 }
 .contanier-bestProducts-title p {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: iranyekanwebregular;
 }
 .contanier-bestProducts-title span {
@@ -619,7 +635,7 @@ a {
   justify-content: space-around;
   align-items: center;
   font-family: YekanBakhHeavy;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-top: 10px;
 }
 .comparison img {
@@ -715,7 +731,7 @@ a {
 }
 .title-details p {
   font-family: iranyekanwebregular;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .star-product {
   display: flex;
@@ -723,9 +739,9 @@ a {
 .star-product img {
   width: 13px;
 }
-.price-products {
+.price-products  {
   font-family: YekanBakhMedium;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 .price-products span {
   padding-right: 5px;
@@ -757,7 +773,7 @@ a {
 .price-products span {
   padding-right: 3px;
   font-family: YekanBakhMedium;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .product-img-glass {
   margin-top: 55px;
@@ -890,15 +906,9 @@ swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
-swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-}
 .mySwiper::part(bullet) {
   background: rgba(0, 0, 0, 0.4);
   opacity: 1;
@@ -923,6 +933,135 @@ swiper-slide img {
 }
 .comments-title h1 span {
   color: #eebb19;
+}
+.review-card {
+  width: 220px;
+  background: linear-gradient(145deg, #3a2e1a, #1e1a0e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px 20px;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(180, 130, 40, 0.25), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.review-card::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(180, 130, 40, 0.15), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+
+.review-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(238, 187, 25, 0.5);
+  flex-shrink: 0;
+}
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+.review-user-name {
+  color: #fff;
+  font-family: YekanBakhHeavy, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+.review-user-location {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: iranyekanwebregular, sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+
+.review-text {
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+.review-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: iranyekanwebregular, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  margin: 0;
+  text-align: right;
+}
+
+
+.review-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.rating-label {
+  color: #fff;
+  font-family: YekanBakhHeavy, sans-serif;
+  font-size: 0.88rem;
+  min-width: 100px;
+  text-align: right;
+}
+
+/* دات‌ها */
+.rating-dots {
+  display: flex;
+  gap: 6px;
+  direction: ltr;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+.dot.active {
+  background: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);
 }
 /* نظرات مشتریان */
 
@@ -950,7 +1089,7 @@ swiper-slide img {
 
 .footer-top-left p {
   font-family: YekanBakhMedium;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   direction: rtl;
 }
@@ -996,7 +1135,7 @@ swiper-slide img {
 
 .footer-service-item p {
   font-family: YekanBakhMedium;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -1034,7 +1173,7 @@ swiper-slide img {
 
 .footer-col ul li a {
   font-family: iranyekanwebregular;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   transition: color 0.2s;
@@ -1593,14 +1732,7 @@ swiper-slide img {
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 300px;
-  }
-
-  swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
+    height: 500px;
   }
 
   /* نظرات مشتری ها */

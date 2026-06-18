@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="./weblog.css" />
+  <link rel="stylesheet" href="../css/font.css" />
+  <title>وبلاگ - کمپ یار</title>
+</head>
+<body>
+
+  <!-- هدر -->
+  <div>
+    <header class="contanier">
+      <!-- همبرگر موبایل مستقل -->
+      <div class="hamburger-icon-navbar-div-mobil  "  >
+        <img src="../img/menu.svg" alt="menu" >
+      </div>
+    
+      <!-- لوگو و سرچ -->
+    
+        <div class="logo-contanier">
+          <div class="img-logo">
+            <a href="../index.html">
+              <img src="../img/LOGO.png" alt="LOGO" />
+            </a>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input" />
+          <img src="../img/search-normal.svg" alt="search" class="search-icon" />
+          <div class="search-results"></div>
+        </div>
+        </div>
+    
+      <!-- ثبت نام و ورود -->
+      <div class="login-contanier">
+        <div class="login-contanier-one">
+          <div class="login-contanier-one-yellow">
+            <a href="#" id="btn-register"><p>ثبت نام</p></a>
+          </div>
+          <a href="#" id="btn-login"><p>ورود</p></a>
+        </div>
+        <div class="login-contanier-khat"><span>|</span></div>
+       
+        <div class="login-contanier-bag">
+        <a href="../buy-cart/buy.html">
+          <div class="login-contanier-bag">
+            <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+              <img src="../img/bag-one.svg" alt="bag" />
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+          </div>
+        </a>
+    
+        </div>
+      </div>
+    </header>
+    
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+      <div class="shop-mbile">
+        <a href="#">
+          <img src="../img/shop.png" alt="shop" />
+          <p>فروشگاه</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="../img/bag.svg" alt="bag" />
+          <p>سبد خرید</p>
+        </a>
+      </div>
+      <div class="user-mobil">
+        <a href="#">
+          <img src="../img/user.png" alt="user" />
+          <p>حساب کاربری ...</p>
+        </a>
+      </div>
+      <div class="hamburger-icon-navbar-div-mobil  ">
+        <a href="#" >
+          <img src="../img/search-normal.svg" alt="search" />
+          <p>جستجو</p>
+        </a>
+      </div>
+    </div>
+    
+    <!-- navbar -->
+    <div class="main-navbar" id="main-navbar">
+      <div class="hamburger-icon-navbar-div">
+        <img src="../img/menu.svg" alt="menu" class="hamburger-icon-navbar" />
+        <p>دسته بندی محصولات</p>
+      </div>
+      <div class="menu-navbar">
+        <a href="/">خانه</a>
+        <a href="../about-us/about-us.html">درباره ما</a>
+        <a href="../contact-us/contact.html">تماس با ما</a>
+      </div>
+      <div class="menu-phone">
+        <p>021-23445566</p>
+        <img src="../img/call-calling.svg" alt="call" />
+      </div>
+    </div>
+    
+    <!-- منو کشویی - خارج از همه چیز -->
+    <div class="hamburger-menu-navbar">
+      <div class="cross-icon">
+        <img src="../img/cross.svg" alt="cross" />
+      </div>
+      <div class="hamburger-menu-items-navbar">
+        <div class="search-container-mobil">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input-mobil" />
+          <img src="../img/search-normal.svg" alt="search" class="search-icon-mobil" />
+        </div>
+        <ul>
+          <li><a href="/"><p>آشپزی در سفر</p></a></li>
+          <li><a href="/"><p>میز و صندلی سفر</p></a></li>
+          <li><a href="/"><p>کوله پشتی کوهنوردی</p></a></li>
+          <li><a href="/"><p>ابزار و گجت سفر</p></a></li>
+          <li><a href="/"><p>لوازم خواب</p></a></li>
+          <li><a href="/"><p>تجهیزات روشنایی</p></a></li>
+          <li><a href="/"><p>بخاری سفری</p></a></li>
+          <li><a href="/"><p>لوازم بهداشتی سفر</p></a></li>
+          <li><a href="/"><p>نظم دهنده سفری</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- overlay -->
+    <div class="overlay"></div>
+  </div>
+
+  <!-- هیرو متن -->
+  <section class="blog-hero">
+    <p>ما در وبلاگ‌مون نکات، راهنماها و داستان‌هایی از دنیای کمپینگ و کوهنوردی با شما به اشتراک می‌گذاریم. از اولین قدم تا رسیدن به قله، همراه هستیم!</p>
+  </section>
+
+  <!-- محبوب‌ترین مطالب -->
+  <section class="blog-section">
+    <h2 class="blog-section-title">محبوب‌ترین مطالب</h2>
+    <div class="blog-popular-grid">
+
+      <div class="blog-card blog-card-popular">
+        <div class="blog-card-img">
+          <img src="../img/weblog/banner2.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>چگونه بهترین چادر کمپینگ را انتخاب کنیم؟</h3>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-popular">
+        <div class="blog-card-img">
+          <img src="../img/weblog/2.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>10 نکته طلایی برای اولین کمپ در طبیعت</h3>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-popular">
+        <div class="blog-card-img">
+          <img src="../img/weblog/3.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>بهترین مسیرهای کوهنوردی ایران برای مبتدیان</h3>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-popular">
+        <div class="blog-card-img">
+          <img src="../img/weblog/4.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>راهنمای کامل تجهیزات کمپینگ در زمستان</h3>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-popular">
+        <div class="blog-card-img">
+          <img src="../img/weblog/5.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>آشپزی در سفر؛ دستور غذاهای ساده و لذیذ</h3>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- جدیدترین مطالب -->
+  <section class="blog-section">
+    <h2 class="blog-section-title">جدیدترین مطالب</h2>
+    <div class="blog-latest-grid">
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/banner2.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>آموزش و یادگیری کامپینگ</h3>
+          <p>کمپینگ فقط یک سرگرمی نیست، یک مهارت زندگی است. در این مطلب با اصول پایه آشنا می‌شویم.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/6.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>معرفی تجهیزات و ماشین‌ها</h3>
+          <p>بهترین تجهیزات و وسایل موردنیاز برای سفرهای طبیعت‌گردی و کمپینگ را بشناسید.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/7.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>جامعه و پیشنهادها</h3>
+          <p>با جامعه ماجراجویان کمپ‌یار آشنا شوید و بهترین پیشنهادها را از تجربیات دیگران بگیرید.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/8.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>آشپزی و غذا در سفر</h3>
+          <p>دستور العمل‌های خوشمزه و ساده برای پختن غذا در طبیعت و کمپ.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/4.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>ایمنی و بقا در طبیعت</h3>
+          <p>نکات مهم ایمنی که هر کمپر و کوهنوردی باید بداند تا سفری امن و لذت‌بخش داشته باشد.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/9.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>تجربه و داستان‌ها</h3>
+          <p>داستان‌های واقعی ماجراجویان و تجربیات فراموش‌نشدنی آن‌ها در دل طبیعت.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/10.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>محیط زیست و مسئولیت‌پذیری</h3>
+          <p>چگونه در طبیعت باشیم و کمترین اثر منفی را روی محیط زیست بگذاریم.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-latest">
+        <div class="blog-card-img">
+          <img src="../img/weblog/3.png" alt="مطلب" />
+        </div>
+        <div class="blog-card-body">
+          <h3>نقشه و مسیرها</h3>
+          <p>معرفی بهترین مسیرها و نقشه‌های کوهنوردی و طبیعت‌گردی در سراسر ایران.</p>
+          <a href="#" class="btn-blog">ادامه مطلب</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- footer start -->
+    <footer class="footer">
+        <!-- خط بالای فوتر -->
+        <div class="footer-top">
+          <div class="footer-top-left">
+            <p>021-111111 | 24 ساعته پاسخگوی شما هستیم تلفن پشتیبانی</p>
+          </div>
+          <div class="footer-top-right">
+            <img src="../img/LOGO.png" alt="logo" class="footer-logo" />
+          </div>
+        </div>
+  
+        <!-- Ellipse پشتی -->
+        <div class="footer-ellipse">
+          <img src="../img/Ellipse 45.png" alt="ellipse" />
+        </div>
+  
+        <!-- آیکون های خدمات -->
+        <div class="footer-services">
+          <div class="footer-service-item">
+            <img src="../img/footer svg/group.svg" alt="delivery" />
+            <p>امکان تحویل در محل</p>
+          </div>
+          <div class="footer-service-item">
+            <img src="../img/footer svg/note-2.svg" alt="payment" />
+            <p>امکان پرداخت در محل</p>
+          </div>
+          <div class="footer-service-item">
+            <img src="../img/footer svg/headphone.svg" alt="support" />
+            <p>پاسخگویی 24 ساعته</p>
+          </div>
+          <div class="footer-service-item">
+            <img src="../img/footer svg/verify.svg" alt="guarantee" />
+            <p>ضمانت اصل بودن کالا</p>
+          </div>
+        </div>
+  
+        <!-- محتوای اصلی فوتر -->
+        <div class="footer-main">
+          <!-- خدمات مشتریان -->
+          <div class="footer-col">
+            <h3>خدمات مشتریان</h3>
+            <ul>
+              <li><a href="#">شرایط استفاده</a></li>
+              <li><a href="#">حریم خصوصی</a></li>
+              <li><a href="#">پاسخ به پرسش های متداول</a></li>
+            </ul>
+          </div>
+  
+          <!-- راهنمای خرید -->
+          <div class="footer-col">
+            <h3>راهنمای خرید</h3>
+            <ul>
+              <li><a href="#">نحوه ثبت سفارش</a></li>
+              <li><a href="#">رویه ارسال سفارش</a></li>
+              <li><a href="#">شیوه های پرداخت</a></li>
+            </ul>
+          </div>
+  
+          <!-- محصولات -->
+          <div class="footer-col">
+            <h3>محصولات</h3>
+            <ul>
+              <li><a href="#">چادر</a></li>
+              <li><a href="#">کوله پشتی</a></li>
+              <li><a href="#">میز و صندلی</a></li>
+              <li><a href="#">وسایل آشپزی</a></li>
+            </ul>
+          </div>
+  
+          <!-- با کمپ یار -->
+          <div class="footer-col">
+            <h3>با کمپ یار</h3>
+            <ul>
+              <li><a href="#">گزارش تخلف در کمپ یار</a></li>
+              <li><a href="#">تماس با کمپ یار</a></li>
+              <li><a href="#">درباره کمپ یار</a></li>
+            </ul>
+          </div>
+          <!-- همراه ما باشید -->
+          <div class="footer-col footer-social">
+            <h3>همراه ما باشید !</h3>
+            <div class="footer-social-icons">
+              <a href="#"
+                ><img src="../img/footer svg/instagram.svg" alt="instagram"
+              /></a>
+              <a href="#"
+                ><img src="../img/footer svg/Twitter.svg" alt="twitter"
+              /></a>
+              <a href="#"
+                ><img src="../img/footer svg/whatsapp.svg" alt="whatsapp"
+              /></a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- ایمیل -->
+        <div class="footer-email">
+          <p>با ثبت ایمیل از جدیدترین تخفیف ها باخبر شوید !</p>
+          <div class="footer-email-input">
+            <button>
+              <img src="../img/footer svg/tick-circle.svg" alt="submit" />
+            </button>
+            <input type="email" placeholder="ایمیل خود را وارد کنید" />
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+
+  <script src="../buy-cart/buy.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

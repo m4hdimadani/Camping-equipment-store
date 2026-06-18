@@ -5,54 +5,129 @@
     <meta name="viewport" content="width=\, initial-scale=1.0" />
     <link rel="stylesheet" href="./about-us.css" />
     <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../hrader and footer/header.css" />
     <link rel="stylesheet" href="../hrader and footer/footer.css" />
     <title>درباره ما</title>
   </head>
   <body>
-    <header class="contanier">
-      <!-- همبرگر موبایل مستقل -->
-      <div class="hamburger-icon-navbar-div-mobil">
-        <img src="../img/menu.svg" alt="menu" />
-      </div>
-
-      <!-- لوگو و سرچ -->
-
-      <div class="logo-contanier">
-        <div class="img-logo">
-          <a href="/">
-            <img src="../img/LOGO.png" alt="LOGO" />
+    <div>
+      <header class="contanier">
+        <!-- همبرگر موبایل مستقل -->
+        <div class="hamburger-icon-navbar-div-mobil  "  >
+          <img src="./img/menu.svg" alt="menu" >
+        </div>
+      
+        <!-- لوگو و سرچ -->
+      
+          <div class="logo-contanier">
+            <div class="img-logo">
+              <a href="../index.html">
+                <img src="../img/LOGO.png" alt="LOGO" />
+              </a>
+          </div>
+          <div class="search-container">
+            <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input" />
+            <img src="../img/search-normal.svg" alt="search" class="search-icon" />
+            <div class="search-results"></div>
+          </div>
+          </div>
+      
+        <!-- ثبت نام و ورود -->
+        <div class="login-contanier">
+          <div class="login-contanier-one">
+            <div class="login-contanier-one-yellow">
+              <a href="#" id="btn-register"><p>ثبت نام</p></a>
+            </div>
+            <a href="#" id="btn-login"><p>ورود</p></a>
+          </div>
+          <div class="login-contanier-khat"><span>|</span></div>
+         
+          <div class="login-contanier-bag">
+          <a href="../buy-cart/buy.html">
+            <div class="login-contanier-bag">
+              <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+                <img src="../img/bag-one.svg" alt="bag" />
+                <span class="cart-count" id="cart-count">0</span>
+              </div>
+            </div>
+          </a>
+      
+          </div>
+        </div>
+      </header>
+      
+      <!-- mobile menu -->
+      <div class="mobile-menu">
+        <div class="shop-mbile">
+          <a href="#">
+            <img src="../img/shop.png" alt="shop" />
+            <p>فروشگاه</p>
           </a>
         </div>
-        <div class="search-container">
-          <input
-            type="text"
-            placeholder="نام محصول مورد نظر را وارد کنید"
-            class="search-input"
-          />
-          <img
-            src="../img/search-normal.svg"
-            alt="search"
-            class="search-icon"
-          />
-          <div class="search-results"></div>
+        <div>
+          <a href="#">
+            <img src="../img/bag.svg" alt="bag" />
+            <p>سبد خرید</p>
+          </a>
+        </div>
+        <div class="user-mobil">
+          <a href="#">
+            <img src="../img/user.png" alt="user" />
+            <p>حساب کاربری ...</p>
+          </a>
+        </div>
+        <div class="hamburger-icon-navbar-div-mobil  ">
+          <a href="#" >
+            <img src="../img/search-normal.svg" alt="search" />
+            <p>جستجو</p>
+          </a>
         </div>
       </div>
-
-      <!-- ثبت نام و ورود -->
-      <div class="login-contanier">
-        <div class="login-contanier-one">
-          <div class="login-contanier-one-yellow">
-            <a href="#"><p>ثبت نام</p></a>
+      
+      <!-- navbar -->
+      <div class="main-navbar" id="main-navbar">
+        <div class="hamburger-icon-navbar-div">
+          <img src="../img/menu.svg" alt="menu" class="hamburger-icon-navbar" />
+          <p>دسته بندی محصولات</p>
+        </div>
+        <div class="menu-navbar">
+          <a href="/">خانه</a>
+          <a href="../weblog/weblog.html">وبلاگ</a>
+          <a href="../contact-us/contact.html">تماس با ما</a>
+        </div>
+        <div class="menu-phone">
+          <p>021-23445566</p>
+          <img src="../img/call-calling.svg" alt="call" />
+        </div>
+      </div>
+      
+      <!-- منو کشویی - خارج از همه چیز -->
+      <div class="hamburger-menu-navbar">
+        <div class="cross-icon">
+          <img src="../img/cross.svg" alt="cross" />
+        </div>
+        <div class="hamburger-menu-items-navbar">
+          <div class="search-container-mobil">
+            <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input-mobil" />
+            <img src="./img/search-normal.svg" alt="search" class="search-icon-mobil" />
           </div>
-          <a href="#"><p>ورود</p></a>
-        </div>
-        <div class="login-contanier-khat"><span>|</span></div>
-        <div class="login-contanier-bag">
-          <img src="../img/bag-one.svg" alt="bag" />
+          <ul>
+            <li><a href="/"><p>آشپزی در سفر</p></a></li>
+            <li><a href="/"><p>میز و صندلی سفر</p></a></li>
+            <li><a href="/"><p>کوله پشتی کوهنوردی</p></a></li>
+            <li><a href="/"><p>ابزار و گجت سفر</p></a></li>
+            <li><a href="/"><p>لوازم خواب</p></a></li>
+            <li><a href="/"><p>تجهیزات روشنایی</p></a></li>
+            <li><a href="/"><p>بخاری سفری</p></a></li>
+            <li><a href="/"><p>لوازم بهداشتی سفر</p></a></li>
+            <li><a href="/"><p>نظم دهنده سفری</p></a></li>
+          </ul>
         </div>
       </div>
-    </header>
+      <!-- overlay -->
+      <div class="overlay"></div>
+    </div>
     <!-- ------------------------------------------------------ -->
     <main class="main-contanier">
       <!-- بخش اول - هیرو -->
@@ -292,13 +367,16 @@
         <p>با ثبت ایمیل از جدیدترین تخفیف ها باخبر شوید !</p>
         <div class="footer-email-input">
           <button>
-            <img src="./img/footer svg/tick-circle.svg" alt="submit" />
+            <img src="../img/footer svg/tick-circle.svg" alt="submit" />
           </button>
           <input type="email" placeholder="ایمیل خود را وارد کنید" />
         </div>
       </div>
     </footer>
 
+    
+
+    <script src="../buy-cart/buy.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

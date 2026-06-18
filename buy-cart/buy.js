@@ -124,7 +124,7 @@ function renderCart() {
       <div class="none-product">
         <h1>سبد خرید شما خالی هست!</h1>
         <p>می‌توانید برای مشاهده محصولات بیشتر به صفحه اصلی مراجعه کنید.</p>
-        <a href="/">
+        <a href="../index.html">
           <button class="none-product-button">بازگشت به صفحه اصلی</button>
         </a>
       </div>`;

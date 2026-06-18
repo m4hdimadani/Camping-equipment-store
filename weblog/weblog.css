@@ -1,0 +1,188 @@
+body {
+    background-color: #000;
+  }
+  
+  /* هیرو */
+  .blog-hero {
+    margin-top: 130px;
+    padding: 30px 60px;
+    direction: rtl;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .blog-hero p {
+    color: rgba(255,255,255,0.75);
+    font-family: iranyekanwebregular;
+    font-size: 0.95rem;
+    line-height: 2;
+    max-width: 800px;
+  }
+  
+  /* عنوان بخش */
+  .blog-section {
+    padding: 30px 40px;
+    direction: rtl;
+  }
+  .blog-section-title {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  
+  /* ===== گرید محبوب‌ترین ===== */
+  .blog-popular-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  
+  /* ===== گرید جدیدترین ===== */
+  .blog-latest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  /* ===== کارت پایه ===== */
+  .blog-card {
+    background: rgba(30,25,15,0.85);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(238,187,25,0.25);
+  }
+  
+  /* عکس کارت */
+  .blog-card-img {
+    width: 100%;
+    overflow: hidden;
+  }
+  .blog-card-popular .blog-card-img {
+    height: 140px;
+  }
+  .blog-card-latest .blog-card-img {
+    height: 180px;
+  }
+  .blog-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: transform 0.3s;
+  }
+  .blog-card:hover .blog-card-img img {
+    transform: scale(1.05);
+  }
+  
+  /* بدنه کارت */
+  .blog-card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .blog-card-body h3 {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .blog-card-body p {
+    color: rgba(255,255,255,0.5);
+    font-family: iranyekanwebregular;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    flex: 1;
+  }
+  
+  /* دکمه ادامه مطلب */
+  .btn-blog {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 38px;
+    background: rgba(238,187,25,0.12);
+    border: 1px solid rgba(238,187,25,0.3);
+    border-radius: 10px;
+    color: #eebb19;
+    font-family: YekanBakhMedium;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+    margin-top: auto;
+  }
+  .btn-blog:hover {
+    background: rgba(238,187,25,0.22);
+    border-color: #eebb19;
+  }
+  
+  /* ===== تبلت ===== */
+  @media (min-width: 667px) and (max-width: 1024px) {
+    .blog-hero {
+      margin-top: 100px;
+      padding: 24px 30px;
+    }
+    .blog-section {
+      padding: 24px 20px;
+    }
+    .blog-popular-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .blog-latest-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-card-popular .blog-card-img {
+      height: 130px;
+    }
+  }
+  
+  /* ===== موبایل ===== */
+  @media (min-width: 375px) and (max-width: 667px) {
+    .blog-hero {
+      margin-top: 70px;
+      padding: 20px 16px;
+    }
+    .blog-hero p {
+      font-size: 0.85rem;
+    }
+    .blog-section {
+      padding: 20px 16px;
+      margin-bottom: 10px;
+    }
+    .blog-section-title {
+      font-size: 1rem;
+    }
+    .blog-popular-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .blog-latest-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .blog-card-popular .blog-card-img {
+      height: 120px;
+    }
+    .blog-card-latest .blog-card-img {
+      height: 160px;
+    }
+    .blog-card-body h3 {
+      font-size: 0.82rem;
+    }
+    .blog-card-body p {
+      font-size: 0.76rem;
+    }
+    .btn-blog {
+      height: 34px;
+      font-size: 0.78rem;
+    }
+  }
