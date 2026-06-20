@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="./tent.css" />
+  <link rel="stylesheet" href="../../css/font.css" />
+  <title>محصولات - کمپ یار</title>
+</head>
+<body>
+
+  <!-- هدر -->
+  <div>
+    <header class="contanier">
+      <!-- همبرگر موبایل مستقل -->
+      <div class="hamburger-icon-navbar-div-mobil  "  >
+        <img src="../../img/menu.svg" alt="menu" >
+      </div>
+    
+      <!-- لوگو و سرچ -->
+    
+        <div class="logo-contanier">
+          <div class="img-logo">
+            <a href="../../index.html">
+              <img src="../../img/LOGO.png" alt="LOGO" />
+            </a>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input" />
+          <img src="../../img/search-normal.svg" alt="search" class="search-icon" />
+          <div class="search-results"></div>
+        </div>
+        </div>
+    
+      <!-- ثبت نام و ورود -->
+      <div class="login-contanier">
+        <div class="login-contanier-one">
+          <div class="login-contanier-one-yellow">
+            <a href="#" id="btn-register"><p>ثبت نام</p></a>
+          </div>
+          <a href="#" id="btn-login"><p>ورود</p></a>
+        </div>
+        <div class="login-contanier-khat"><span>|</span></div>
+       
+        <div class="login-contanier-bag">
+        <a href="../../buy-cart/buy.html">
+          <div class="login-contanier-bag">
+            <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+              <img src="../../img/bag-one.svg" alt="bag" />
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+          </div>
+        </a>
+    
+        </div>
+      </div>
+    </header>
+    
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+      <div class="shop-mbile">
+        <a href="#">
+          <img src="../../img/shop.png" alt="shop" />
+          <p>فروشگاه</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="../../img/bag.svg" alt="bag" />
+          <p>سبد خرید</p>
+        </a>
+      </div>
+      <div class="user-mobil">
+        <a href="#">
+          <img src="../../img/user.png" alt="user" />
+          <p>حساب کاربری ...</p>
+        </a>
+      </div>
+      <div class="hamburger-icon-navbar-div-mobil  ">
+        <a href="#" >
+          <img src="../../img/search-normal.svg" alt="search" />
+          <p>جستجو</p>
+        </a>
+      </div>
+    </div>
+    
+    <!-- navbar -->
+    <div class="main-navbar" id="main-navbar">
+      <div class="hamburger-icon-navbar-div">
+        <img src="../../img/menu.svg" alt="menu" class="hamburger-icon-navbar" />
+        <p>دسته بندی محصولات</p>
+      </div>
+      <div class="menu-navbar">
+        <a href="../../index.html">خانه</a>
+        <a href="../../weblog/weblog.html">وبلاگ</a>
+        <a href="../../about-us/about-us.html">درباره ما</a>
+        <a href="../../contact-us/contact.html">تماس با ما</a>
+      </div>
+      <div class="menu-phone">
+        <p>021-23445566</p>
+        <img src="../../img/call-calling.svg" alt="call" />
+      </div>
+    </div>
+    
+    <!-- منو کشویی - خارج از همه چیز -->
+    <div class="hamburger-menu-navbar">
+      <div class="cross-icon">
+        <img src="../../img/cross.svg" alt="cross" />
+      </div>
+      <div class="hamburger-menu-items-navbar">
+        <div class="search-container-mobil">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input-mobil" />
+          <img src="../../img/search-normal.svg" alt="search" class="search-icon-mobil" />
+        </div>
+        <ul>
+          <li><a href="/"><p>آشپزی در سفر</p></a></li>
+          <li><a href="/"><p>میز و صندلی سفر</p></a></li>
+          <li><a href="/"><p>کوله پشتی کوهنوردی</p></a></li>
+          <li><a href="/"><p>ابزار و گجت سفر</p></a></li>
+          <li><a href="/"><p>لوازم خواب</p></a></li>
+          <li><a href="/"><p>تجهیزات روشنایی</p></a></li>
+          <li><a href="/"><p>بخاری سفری</p></a></li>
+          <li><a href="/"><p>لوازم بهداشتی سفر</p></a></li>
+          <li><a href="/"><p>نظم دهنده سفری</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- overlay -->
+    <div class="overlay"></div>
+  </div>
+    <!-- banner -->
+    <div class="banner">
+      <img src="../../img/Banner-p.png" alt="banner" >
+    </div>
+  <!-- toolbar -->
+  <div class="products-toolbar">
+    <div class="toolbar-right">
+      <button class="toolbar-filter-btn" id="filter-btn">
+        <img src="../../img/filter-list.svg" alt="filter" />
+        فیلتر
+      </button>
+    </div>
+    <div class="toolbar-left">
+      <div class="toolbar-sort">
+        <select id="sort-select">
+          <option>مرتبط ترین</option>
+          <option>ارزان‌ترین</option>
+          <option>گران‌ترین</option>
+          <option>پرفروش‌ترین</option>
+          <option>جدیدترین</option>
+        </select>
+      </div>
+      <span class="toolbar-count">499 محصول</span>
+    </div>
+  </div>
+
+  <!-- محتوا -->
+  <div class="products-page-layout">
+
+    <!-- سایدبار فیلتر -->
+    <aside class="filter-sidebar" id="filter-sidebar">
+      <div class="filter-group">
+        <h3 class="filter-title">دسته‌بندی</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" checked disabled  class="my-checkbox"/> چادر</label></li>
+          <li><label><input type="checkbox" disabled/> کیسه خواب</label></li>
+          <li><label><input type="checkbox" disabled/> کوله پشتی</label></li>
+          <li><label><input type="checkbox" disabled/> صندلی</label></li>
+          <li><label><input type="checkbox" disabled/> چراق قوه</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">برند</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> REI</label></li>
+          <li><label><input type="checkbox" /> Coleman</label></li>
+          <li><label><input type="checkbox" /> Black Diamond</label></li>
+          <li><label><input type="checkbox" /> Eurohike</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">محدوده قیمت</h3>
+        <div class="price-range">
+          <input type="range" min="0" max="10000000" value="10000000" class="range-slider" />
+          <div class="price-range-labels">
+            <span>10,000,000</span>
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">امتیاز</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> ⭐⭐⭐⭐⭐</label></li>
+          <li><label><input type="checkbox" /> ⭐⭐⭐⭐</label></li>
+          <li><label><input type="checkbox" /> ⭐⭐⭐</label></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- گرید محصولات -->
+    <div class="products-grid-wrapper">
+      <div class="products-grid" id="products-grid">
+
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img src="../../img/tent/freepik_126379079-removebg-preview (2) 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../../img/star (1).png" alt="star" />
+              <span>(۱۲۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳.۵ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۲.۵۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../../img/tent/freepik_165370115-removebg-preview 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <span>(۸۵)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۴.۰۰۰.۰۰۰</span>
+              <span class="card-price">۳.۲۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۰%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../../img/tent/freepik_126379079-removebg-preview (2) 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <span>(۴۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>۳ نفر</span>
+              <span>۴ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۱.۸۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ردیف دوم -->
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../../img/tent/freepik_126379079-removebg-preview (2) 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <span>(۶۵)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳.۲ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۳.۵۰۰.۰۰۰</span>
+              <span class="card-price">۲.۸۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۰%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../../img/tent/freepik_165370115-removebg-preview 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../../img/star.png" alt="star" />
+              <img src="../../../img/star.png" alt="star" />
+              <img src="../../../img/star.png" alt="star" />
+              <img src="../../../img/star.png" alt="star" />
+              <img src="../../../img/star.png" alt="star" />
+              <span>(۲۱۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>۴ نفر</span>
+              <span>۵ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۴.۹۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-top">
+            <button class="card-wishlist"><img src="../../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../../img/tent/freepik_126379079-removebg-preview (2) 1.png" alt="چادر" />
+          </div>
+          <div class="product-card-info">
+            <h3>چادر دو نفره برند REI</h3>
+            <div class="card-stars">
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star.png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <img src="../../img/star (1).png" alt="star" />
+              <span>(۳۳)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۲.۸ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۲.۲۰۰.۰۰۰</span>
+              <span class="card-price">۱.۶۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۷%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+  
+
+  <script src="../../js/script.js"></script>
+</body>
+</html>

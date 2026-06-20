@@ -1,0 +1,426 @@
+body {
+    background: #000;
+  }
+  
+  /* toolbar */
+  .products-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    margin-top: 120px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    direction: rtl;
+    margin-top: 200px;
+  }
+  .banner img {
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    filter: sepia(0.2) saturate(2) hue-rotate(-10deg);
+  }
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .toolbar-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #fff;
+    font-family: YekanBakhMedium;
+    font-size: 0.88rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .toolbar-filter-btn img {
+    width: 16px;
+    filter: brightness(0) invert(1);
+  }
+  .toolbar-filter-btn:hover {
+    border-color: #eebb19;
+    color: #eebb19;
+  }
+  
+  .toolbar-sort select {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #fff;
+    font-family: YekanBakhMedium;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    outline: none;
+    cursor: pointer;
+    direction: rtl;
+  }
+  .toolbar-sort select option {
+    background: #1a1a1a;
+  }
+  
+  .toolbar-count {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: iranyekanwebregular;
+    font-size: 0.85rem;
+  }
+  
+  /* layout */
+  .products-page-layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px 60px;
+    direction: rtl;
+    align-items: flex-start;
+  }
+  
+  /* سایدبار */
+  .filter-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+  }
+  .filter-group {
+    margin-bottom: 24px;
+  }
+  .filter-title {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .filter-list li label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: iranyekanwebregular;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .filter-list li label:hover {
+    color: #eebb19;
+  }
+  .filter-list input[type="checkbox"] {
+    accent-color: #eebb19;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+  }
+  .my-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 2px solid #eebb19;
+    background: #eebb19;
+    position: relative;
+    cursor: not-allowed;
+    flex-shrink: 0;
+  }
+  
+  .price-range {
+    padding: 4px 0;
+  }
+  .range-slider {
+    width: 100%;
+    accent-color: #eebb19;
+    cursor: pointer;
+  }
+  .price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: iranyekanwebregular;
+    font-size: 0.72rem;
+    margin-top: 6px;
+  }
+  
+  /* گرید محصولات */
+  .products-grid-wrapper {
+    flex: 1;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  
+  /* کارت محصول */
+  .product-card {
+    background: rgba(22, 18, 10, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(238, 187, 25, 0.3);
+  }
+  
+  .product-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px 0;
+  }
+  .card-wishlist {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .card-wishlist:hover {
+    background: rgba(238, 187, 25, 0.15);
+  }
+  .card-wishlist img {
+    width: 16px;
+  }
+  
+  .card-compare {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: YekanBakhMedium;
+    font-size: 0.72rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .card-compare:hover {
+    border-color: #eebb19;
+    color: #eebb19;
+  }
+  
+  /* عکس */
+  .product-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    height: 250px;
+  }
+  .product-card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+  .product-card:hover .product-card-img img {
+    transform: scale(1.06);
+  }
+  
+  /* اطلاعات */
+  .product-card-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+  }
+  .product-card-info h3 {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .card-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .card-stars img {
+    width: 12px;
+  }
+  .card-stars span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.72rem;
+    font-family: iranyekanwebregular;
+    margin-right: 4px;
+  }
+  
+  .card-specs {
+    display: flex;
+    gap: 10px;
+  }
+  .card-specs span {
+    color: rgba(255, 255, 255, 0.45);
+    font-family: iranyekanwebregular;
+    font-size: 0.75rem;
+  }
+  .card-specs span::before {
+    content: "• ";
+  }
+  
+  .card-availability {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .avail-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4caf50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.7);
+    flex-shrink: 0;
+  }
+  .card-availability span {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: iranyekanwebregular;
+    font-size: 0.74rem;
+  }
+  
+  .card-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .card-price {
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.88rem;
+  }
+  .card-price-original {
+    color: rgba(255, 255, 255, 0.3);
+    font-family: YekanBakhMedium;
+    font-size: 0.75rem;
+    text-decoration: line-through;
+  }
+  .card-badge {
+    background: #e53935;
+    color: #fff;
+    font-family: YekanBakhHeavy;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+  
+  /* pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    direction: ltr;
+  }
+  .page-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: YekanBakhMedium;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .page-btn:hover {
+    border-color: #eebb19;
+    color: #eebb19;
+  }
+  .page-btn.active {
+    background: #eebb19;
+    border-color: #eebb19;
+    color: #000;
+  }
+  .pagination span {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* تبلت */
+  @media (min-width: 667px) and (max-width: 1024px) {
+    .products-toolbar {
+      margin-top: 90px;
+    }
+    .filter-sidebar {
+      width: 180px;
+    }
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .product-card-img {
+      height: 130px;
+    }
+  }
+  
+  /* موبایل */
+  @media (max-width: 667px) {
+    .products-toolbar {
+      margin-top: 70px;
+      padding: 12px 16px;
+    }
+    .products-page-layout {
+      flex-direction: column;
+      padding: 16px;
+    }
+    .filter-sidebar {
+      width: 100%;
+      position: static;
+      display: none;
+    }
+    .filter-sidebar.open {
+      display: block;
+    }
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .product-card-img {
+      height: 110px;
+    }
+    .product-card-info h3 {
+      font-size: 0.78rem;
+    }
+    .card-price {
+      font-size: 0.78rem;
+    }
+  }
+  
