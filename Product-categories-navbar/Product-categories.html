@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="./Product-categories.css" />
+  <link rel="stylesheet" href="../css/font.css" />
+  <title>محصولات - کمپ یار</title>
+</head>
+<body>
+
+  <!-- هدر -->
+  <div>
+    <header class="contanier">
+      <!-- همبرگر موبایل مستقل -->
+      <div class="hamburger-icon-navbar-div-mobil  "  >
+        <img src="../img/menu.svg" alt="menu" >
+      </div>
+    
+      <!-- لوگو و سرچ -->
+    
+        <div class="logo-contanier">
+          <div class="img-logo">
+            <a href="../index.html">
+              <img src="../img/LOGO.png" alt="LOGO" />
+            </a>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input" />
+          <img src="../img/search-normal.svg" alt="search" class="search-icon" />
+          <div class="search-results"></div>
+        </div>
+        </div>
+    
+      <!-- ثبت نام و ورود -->
+      <div class="login-contanier">
+        <div class="login-contanier-one">
+          <div class="login-contanier-one-yellow">
+            <a href="#" id="btn-register"><p>ثبت نام</p></a>
+          </div>
+          <a href="#" id="btn-login"><p>ورود</p></a>
+        </div>
+        <div class="login-contanier-khat"><span>|</span></div>
+       
+        <div class="login-contanier-bag">
+        <a href="../buy-cart/buy.html">
+          <div class="login-contanier-bag">
+            <div class="cart-icon-wrapper" onclick="window.location.href='./cart.html'">
+              <img src="../img/bag-one.svg" alt="bag" />
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+          </div>
+        </a>
+    
+        </div>
+      </div>
+    </header>
+    
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+      <div class="shop-mbile">
+        <a href="#">
+          <img src="../img/shop.png" alt="shop" />
+          <p>فروشگاه</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="../img/bag.svg" alt="bag" />
+          <p>سبد خرید</p>
+        </a>
+      </div>
+      <div class="user-mobil">
+        <a href="#">
+          <img src="../img/user.png" alt="user" />
+          <p>حساب کاربری ...</p>
+        </a>
+      </div>
+      <div class="hamburger-icon-navbar-div-mobil  ">
+        <a href="#" >
+          <img src="../img/search-normal.svg" alt="search" />
+          <p>جستجو</p>
+        </a>
+      </div>
+    </div>
+    
+    <!-- navbar -->
+    <div class="main-navbar" id="main-navbar">
+      <div class="hamburger-icon-navbar-div">
+        <img src="../img/menu.svg" alt="menu" class="hamburger-icon-navbar" />
+        <p>دسته بندی محصولات</p>
+      </div>
+      <div class="menu-navbar">
+        <a href="../index.html">خانه</a>
+        <a href="../weblog/weblog.html">وبلاگ</a>
+        <a href="../about-us/about-us.html">درباره ما</a>
+        <a href="../contact-us/contact.html">تماس با ما</a>
+      </div>
+      <div class="menu-phone">
+        <p>021-23445566</p>
+        <img src="../img/call-calling.svg" alt="call" />
+      </div>
+    </div>
+    
+    <!-- منو کشویی - خارج از همه چیز -->
+    <div class="hamburger-menu-navbar">
+      <div class="cross-icon">
+        <img src="../img/cross.svg" alt="cross" />
+      </div>
+      <div class="hamburger-menu-items-navbar">
+        <div class="search-container-mobil">
+          <input type="text" placeholder="نام محصول مورد نظر را وارد کنید" class="search-input-mobil" />
+          <img src="../img/search-normal.svg" alt="search" class="search-icon-mobil" />
+        </div>
+        <ul>
+          <li><a href="./Product-categories.html"><p>آشپزی در سفر</p></a></li>
+          <li><a href="./Product-categories.html"><p>میز و صندلی سفر</p></a></li>
+          <li><a href="./Product-categories.html"><p>کوله پشتی کوهنوردی</p></a></li>
+          <li><a href="./Product-categories.html"><p>ابزار و گجت سفر</p></a></li>
+          <li><a href="./Product-categories.html"><p>لوازم خواب</p></a></li>
+          <li><a href="./Product-categories.html"><p>تجهیزات روشنایی</p></a></li>
+          <li><a href="./Product-categories.html"><p>بخاری سفری</p></a></li>
+          <li><a href="./Product-categories.html"><p>لوازم بهداشتی سفر</p></a></li>
+          <li><a href="./Product-categories.html"><p>نظم دهنده سفری</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- overlay -->
+    <div class="overlay"></div>
+  </div>
+  <!-- toolbar -->
+  <div class="products-toolbar">
+    <div class="toolbar-right">
+      <button class="toolbar-filter-btn" id="filter-btn">
+        <img src="../img/filter-list.svg" alt="filter" />
+        فیلتر
+      </button>
+    </div>
+    <div class="toolbar-left">
+      <div class="toolbar-sort">
+        <select id="sort-select">
+          <option>مرتبط ترین</option>
+          <option>ارزان‌ترین</option>
+          <option>گران‌ترین</option>
+          <option>پرفروش‌ترین</option>
+          <option>جدیدترین</option>
+        </select>
+      </div>
+      <span class="toolbar-count">499 محصول</span>
+    </div>
+  </div>
+
+  <!-- محتوا -->
+  <div class="products-page-layout">
+
+    <!-- سایدبار فیلتر -->
+    <aside class="filter-sidebar" id="filter-sidebar">
+      <div class="filter-group">
+        <h3 class="filter-title">دسته‌بندی</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" disabled /> چادر</label></li>
+          <li><label><input type="checkbox" disabled/> کیسه خواب</label></li>
+          <li><label><input type="checkbox" disabled/> کوله پشتی</label></li>
+          <li><label><input type="checkbox" disabled/> صندلی</label></li>
+          <li><label><input type="checkbox" disabled/> چراق قوه</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">برند</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> REI</label></li>
+          <li><label><input type="checkbox" /> Coleman</label></li>
+          <li><label><input type="checkbox" /> Black Diamond</label></li>
+          <li><label><input type="checkbox" /> Eurohike</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">محدوده قیمت</h3>
+        <div class="price-range">
+          <input type="range" min="0" max="10000000" value="10000000" class="range-slider" />
+          <div class="price-range-labels">
+            <span>10,000,000</span>
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h3 class="filter-title">امتیاز</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> ⭐⭐⭐⭐⭐</label></li>
+          <li><label><input type="checkbox" /> ⭐⭐⭐⭐</label></li>
+          <li><label><input type="checkbox" /> ⭐⭐⭐</label></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- گرید محصولات -->
+    <div class="products-grid-wrapper">
+      <div class="products-grid" id="products-grid">
+
+        <div class="product-card">
+          <a href="../products/Spoon-and-fork-set.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+            <img src="../img/products/20pcs-CAMPING-4-PERSONS-CUTLERY-SET-1.png" alt="قاشق و چنگال" />
+          </div>
+          <div class="product-card-info">
+            <h3>ست قاشق و چنگال</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <span>(۱۲۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳.۵ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۲.۵۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="../products/table.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+          </div>
+          <div class="product-card-img">
+            <img  src="../img/product/download-removebg-preview 2.png" alt="میز و صندلی" />
+          </div>
+          <div class="product-card-info">
+            <h3>میز مسافرتی</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <span>(۸۵)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۴.۰۰۰.۰۰۰</span>
+              <span class="card-price">۳.۲۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۰%</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="product-card">
+          <a href="../products/backpack.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+              <img  src="../img/product/61mbnbBi2CL._AC_SL1500_-removebg-preview 1.png" alt="کوله پشتی" />
+            </div>
+          <div class="product-card-info">
+            <h3>کوله پشتی مسافرتی</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <span>(۴۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>۳ نفر</span>
+              <span>۴ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۱.۸۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="product-card">
+          <a href="../products/Camping-tools.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+            <img  src="../img/products/TACTICAL-MULTI-FUNCTIONAL-TOOL-ZSB-04-3.png" alt="ابزار" />
+          </div>
+          <div class="product-card-info">
+            <h3>ابزار چندکاره و تاکتیکی مدل ZSB-04</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <span>(۶۵)</span>
+            </div>
+            <div class="card-specs">
+              <span>۲ نفر</span>
+              <span>۳.۲ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۳.۵۰۰.۰۰۰</span>
+              <span class="card-price">۲.۸۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۰%</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="product-card">
+          <a href="../products/sleeping-bag.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+              <img   src="../img/sleeping-bag/14025351.png" alt="کیسه خواب" />
+          </div>
+          <div class="product-card-info">
+            <h3>کیسه خواب</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <span>(۲۱۰)</span>
+            </div>
+            <div class="card-specs">
+              <span>1 نفر</span>
+              <span>۵ کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price">۴.۹۰۰.۰۰۰ تومان</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="product-card">
+          <a href="../products/flashlight.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+            <img  src="../img/light/SMALL-SUN-ZY-H26-UV-FLASHLIGHT-1.png" alt="روشنایی" />
+          </div>
+          <div class="product-card-info">
+            <h3>چراغ قوه پلیسی اسمال سان مدل ZY-T292</h3>
+            <div class="card-stars">
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star.png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <img src="../img/star (1).png" alt="star" />
+              <span>(۳۳)</span>
+            </div>
+            <div class="card-specs">
+              <span>1 کیلو</span>
+            </div>
+            <div class="card-availability">
+              <span class="avail-dot"></span>
+              <span>آماد پاییز و زمستان</span>
+            </div>
+            <div class="card-price-row">
+              <span class="card-price-original">۲.۲۰۰.۰۰۰</span>
+              <span class="card-price">۱.۶۰۰.۰۰۰ تومان</span>
+              <span class="card-badge">۲۷%</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="product-card">
+          <a href="../products/heater.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+              <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+              <img  src="../img/products/بخاری-هیزمی-استیل-تاشو-مجیکمپ-مدل-کلاسیک-7.png" alt="بخاری" />
+            </div>
+            <div class="product-card-info">
+              <h3>بخاری هیزمی استیل تاشو مجیکمپ مدل کلاسیک</h3>
+              <div class="card-stars">
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <span>(۳۳)</span>
+              </div>
+              <div class="card-specs">
+                <span>5 کیلو</span>
+              </div>
+              <div class="card-availability">
+                <span class="avail-dot"></span>
+                <span>آماد پاییز و زمستان</span>
+              </div>
+              <div class="card-price-row">
+                <span class="card-price-original">۲.۲۰۰.۰۰۰</span>
+                <span class="card-price">۱.۶۰۰.۰۰۰ تومان</span>
+                <span class="card-badge">۲۷%</span>
+              </div>
+            </div>
+          </a>
+          </div>
+          
+        <div class="product-card">
+          <a href="../products/shower-tent.html">
+
+            <div class="product-card-top">
+              <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+            <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+              <img  src="../img/products/REMAL-CAMP-PRIVACY-POP-UP-SHOWER-TENT-7.png" alt="چادر حمام" />
+            </div>
+            <div class="product-card-info">
+              <h3>چادر صحرایی حمام و دستشویی Rimal Camp</h3>
+              <div class="card-stars">
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <span>(۳۳)</span>
+              </div>
+              <div class="card-specs">
+                <span>1 نفر</span>
+                <span>2.1 کیلوگرم</span>
+              </div>
+              <div class="card-availability">
+                <span class="avail-dot"></span>
+                <span>آماد پاییز و زمستان</span>
+              </div>
+              <div class="card-price-row">
+                <span class="card-price-original">۲.۲۰۰.۰۰۰</span>
+                <span class="card-price">۱.۶۰۰.۰۰۰ تومان</span>
+                <span class="card-badge">۲۷%</span>
+              </div>
+            </div>
+          </a>
+          </div>
+          
+          <div class="product-card">
+            <a href="../products/orderly.html">
+
+              <div class="product-card-top">
+                <button class="card-wishlist"><img src="../img/heart.png" alt="heart" /></button>
+                <button class="card-compare">مقایسه</button>
+            </div>
+            <div class="product-card-img">
+              <img  src="../img/products/کیف-نظم-دهنده-انکیدو-سایز-بزرگ-9.png" alt="کیف نظم دهنده" />
+            </div>
+            <div class="product-card-info">
+              <h3>کیف نظم دهنده انکیدو سایز بزرگ</h3>
+              <div class="card-stars">
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star.png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <img src="../img/star (1).png" alt="star" />
+                <span>(۳۳)</span>
+              </div>
+              <div class="card-specs">
+                <span> 70 لیتر</span>
+                <span>2.5 کیلوگرم</span>
+              </div>
+              <div class="card-availability">
+                <span class="avail-dot"></span>
+                <span>آماد پاییز و زمستان</span>
+              </div>
+              <div class="card-price-row">
+                <span class="card-price-original">۲.۲۰۰.۰۰۰</span>
+                <span class="card-price">۱.۶۰۰.۰۰۰ تومان</span>
+                <span class="card-badge">۲۷%</span>
+              </div>
+            </div>
+          </a>
+          </div>
+      </div>
+  </div>
+
+  
+  <script src="../buy-cart/buy.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
